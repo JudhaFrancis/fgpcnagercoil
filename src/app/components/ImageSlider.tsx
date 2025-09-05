@@ -39,7 +39,9 @@ export default function ImageSlider() {
           <Image
             src={previewImage!}
             alt="Preview"
-            className="max-w-full max-h-full rounded-xl shadow-lg"
+            width={600}
+            height={400} quality={100}
+            className="rounded-xl shadow-lg object-contain"
           />
           <button
             onClick={() => setPreviewImage(null)}
@@ -76,12 +78,16 @@ export default function ImageSlider() {
         >
           {images.map((img, index) => (
             <SwiperSlide key={index}>
-              <Image
-                src={`/gallery/2025/${img}.jpg`}
-                alt={`Slide ${index + 1}`}
-                className="w-full h:24 md:h-32 object-cover rounded cursor-pointer"
-                onClick={() => setPreviewImage(`/gallery/2025/${img}.jpg`)}
-              />
+              <div className="relative w-full h-24 md:h-32 rounded overflow-hidden cursor-pointer">
+                <Image
+                  src={`/gallery/2025/${img}.jpg`}
+                  alt={`Slide ${index + 1}`}
+                  fill quality={100}
+                  className="object-cover"
+                  onClick={() => setPreviewImage(`/gallery/2025/${img}.jpg`)}
+                />
+              </div>
+
             </SwiperSlide>
           ))}
         </Swiper>

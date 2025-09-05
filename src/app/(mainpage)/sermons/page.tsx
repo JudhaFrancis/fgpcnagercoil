@@ -165,7 +165,8 @@ export default function SermonsPage() {
                 <div className="w-full h-64 md:h-40 p-2 -mt-8 relative z-10 rounded-lg overflow-hidden">
                   <Image
                     src={playlist.img}
-                    alt={playlist.title}
+                    alt={playlist.title} width={400}
+                    height={250}
                     className="w-full h-full object-cover rounded-lg shadow-md border-t-[1px] border-white"
                   />
                 </div>

@@ -70,9 +70,9 @@ export default function AboutPage() {
               eget nulla.
             </p>
             <blockquote className="w-full block border-l-4 border-[#84373d] pl-6 py-2 italic text-gray-700 font-semibold text-justify">
-              "Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
+              &quot;Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.
               Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu
-              eget nulla."
+              eget nulla.&quot;
             </blockquote>
 
           </div>
@@ -106,23 +106,32 @@ export default function AboutPage() {
           <Image
             src="/aboutus/aboutus_1.jpg"
             alt="About 1"
+            width={300}
+            height={200}
             className="rounded-xl shadow-md w-full h-full object-cover"
           />
           <Image
             src="/aboutus/aboutus_2.jpg"
             alt="About 2"
+            width={300}
+            height={200}
             className="rounded-xl shadow-md w-full h-full object-cover"
           />
           <Image
             src="/aboutus/aboutus_3.jpg"
             alt="About 3"
+            width={300}
+            height={200}
             className="rounded-xl shadow-md w-full h-full object-cover"
           />
           <Image
             src="/aboutus/aboutus_4.jpg"
             alt="About 4"
+            width={300}
+            height={200}
             className="rounded-xl shadow-md w-full h-full object-cover"
           />
+
         </div>
       </section>
 
@@ -163,8 +172,9 @@ export default function AboutPage() {
               <div className="md:w-5/12 mt-4 md:mt-0">
                 <Image
                   src="/aboutus/aboutus_3.jpg"
-                  alt="Timeline 2025"
-                  className="w-full h-56 md:h-64 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-500"
+                  alt="Timeline 2025" width={800}
+                  height={256}
+                  className="object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>
@@ -175,8 +185,9 @@ export default function AboutPage() {
               <div className="md:w-5/12 md:order-1 order-2 mt-4 md:mt-0">
                 <Image
                   src="/aboutus/aboutus_2.jpg"
-                  alt="Timeline 2015"
-                  className="w-full h-56 md:h-64 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-500"
+                  alt="Timeline 2015" width={800}
+                  height={256}
+                  className="object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-500"
                 />
               </div>
 
@@ -215,8 +226,9 @@ export default function AboutPage() {
               <div className="md:w-5/12 mt-4 md:mt-0">
                 <Image
                   src="/aboutus/aboutus_1.jpg"
-                  alt="Timeline 2005"
-                  className="w-full h-56 md:h-64 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-500"
+                  alt="Timeline 2005" width={800}
+                  height={256}
+                  className="object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </div>

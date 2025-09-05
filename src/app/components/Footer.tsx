@@ -19,8 +19,8 @@ export default function Footer() {
                         <a href="/home">
                             <Image
                                 src="/header/fgpc_nagercoil_logo.jpg"
-                                alt="FGPC Logo"
-                                className="w-20 h-20 rounded-[10px] mb-4"
+                                alt="FGPC Logo" width={80} height={80}
+                                className="rounded-[10px] mb-4"
                             />
                         </a>
                         <div className="flex space-x-4 mt-2">

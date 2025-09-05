@@ -1,6 +1,6 @@
 'use client'
 
-import Image from 'next/image';
+import Image from 'next/image'
 import ImageSlider from '../../components/ImageSlider';
 import UpcomingSlider from '../../components/UpcomingSlider';
 
@@ -149,7 +149,9 @@ export default function HomePage() {
             <Image
               src="/home/pr_johnsam_joyson.jpg"
               alt="Johnsam Joyson"
-              className="rounded-2xl w-96 h-auto object-cover"
+              width={384}
+              height={512} quality={100}
+              className="rounded-2xl object-cover"
             />
           </div>
 
@@ -171,7 +173,7 @@ export default function HomePage() {
               <div className="relative h-32 w-48 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
                 <Image
                   src="/songs/johnsam/johnsam_lyrical_thumbnail.jpg"
-                  alt="Song 1"
+                  alt="Song 1" fill quality={100}
                   className="h-full w-full rounded-lg shadow-md object-cover"
                 />
                 {/* Hover Text */}
@@ -187,7 +189,7 @@ export default function HomePage() {
               <div className="relative h-32 w-48 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
                 <Image
                   src="/songs/johnsam/johnsam_album_thumbnail.jpg"
-                  alt="Song 2"
+                  alt="Song 2" fill quality={100}
                   className="h-full w-full rounded-lg shadow-md object-cover"
                 />
                 {/* Hover Text */}
@@ -203,7 +205,7 @@ export default function HomePage() {
               <div className="relative h-32 w-48 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
                 <Image
                   src="/songs/johnsam/johnsam_recent_thumbnail.jpg"
-                  alt="Song 3"
+                  alt="Song 3" fill quality={100}
                   className="h-full w-full rounded-lg shadow-md object-cover"
                 />
                 {/* Hover Text */}
@@ -263,7 +265,7 @@ export default function HomePage() {
               <div className="relative h-32 w-56 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
                 <Image
                   src="/songs/davidsam/davidsam_famous.jpg"
-                  alt="Song 1"
+                  alt="Song 1" fill quality={100}
                   className="h-full w-full rounded-lg shadow-md object-cover"
                 />
                 {/* Hover Text */}
@@ -279,7 +281,7 @@ export default function HomePage() {
               <div className="relative h-32 w-56 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
                 <Image
                   src="/songs/davidsam/davidsam_jukebox.jpg"
-                  alt="Song 2"
+                  alt="Song 2" fill quality={100}
                   className="h-full w-full rounded-lg shadow-md object-cover"
                 />
                 {/* Hover Text */}
@@ -295,7 +297,7 @@ export default function HomePage() {
               <div className="relative h-32 w-56 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
                 <Image
                   src="/songs/davidsam/davidsam_recent.jpg"
-                  alt="Song 3"
+                  alt="Song 3" fill quality={100}
                   className="h-full w-full rounded-lg shadow-md object-cover"
                 />
                 {/* Hover Text */}
@@ -334,8 +336,9 @@ export default function HomePage() {
           <div className="flex justify-center md:justify-end order-1 md:order-2 md:col-span-2">
             <Image
               src="/home/pr_davidsam_joyson.jpg"
-              alt="Davidsam Joyson"
-              className="rounded-2xl w-96 h-auto object-cover"
+              alt="Davidsam Joyson" width={384}
+              height={512} quality={100}
+              className="rounded-2xl object-cover"
             />
           </div>
 
@@ -409,7 +412,9 @@ export default function HomePage() {
               <Image
                 src="/home/sunday_service.jpg"
                 alt="Sunday Service"
-                className="w-full h-auto rounded-lg"
+                width={800}
+                height={500} quality={100}
+                className="rounded-lg"
                 style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
               />
             </div>
@@ -418,8 +423,9 @@ export default function HomePage() {
             <div className="absolute md:-top-8 -top-12 -right-2 md:-right-16 w-40 md:w-56 rounded-xl border-3 border-white p-1 overflow-visible transform hover:scale-105 transition duration-300 animate-move bg-white">
               <Image
                 src="/home/fasting_prayer.jpg"
-                alt="Fasting Prayer"
-                className="w-full h-auto rounded-lg"
+                alt="Fasting Prayer" width={800}
+                height={500} quality={100}
+                className="rounded-lg"
                 style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
               />
             </div>
@@ -428,8 +434,9 @@ export default function HomePage() {
             <div className="absolute md:-bottom-8 -bottom-12 -left-2 md:-left-16 w-40 md:w-56 rounded-xl border-3 border-white p-1 overflow-visible transform hover:scale-105 transition duration-300 animate-move bg-white">
               <Image
                 src="/home/bible_study.jpg"
-                alt="Bible Study"
-                className="w-full h-auto rounded-lg"
+                alt="Bible Study" width={800}
+                height={500} quality={100}
+                className="rounded-lg"
                 style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
               />
             </div>
@@ -438,8 +445,9 @@ export default function HomePage() {
             <div className="absolute md:-bottom-8 -bottom-12 -right-2 md:-right-16 w-40 md:w-56 rounded-xl border-3 border-white p-1 overflow-visible transform hover:scale-105 transition duration-300 animate-move bg-white">
               <Image
                 src="/home/saturday_worship.jpg"
-                alt="Saturday Worship"
-                className="w-full h-auto rounded-lg"
+                alt="Saturday Worship" width={800}
+                height={500} quality={100}
+                className="rounded-lg"
                 style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
               />
             </div>
@@ -464,7 +472,8 @@ export default function HomePage() {
               <div className="bg-white border border-gray-300 rounded-2xl shadow-md p-4 flex gap-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                 <Image
                   src="/home/upcoming_meeting_2025.jpg"
-                  alt="Event Thumbnail"
+                  alt="Event Thumbnail" width={112}
+                  height={112} quality={100}
                   className="w-28 md:w-20 h-full rounded-xl object-cover flex-shrink-0 shadow-sm"
                 />
                 <div className="flex-1 flex flex-col justify-center">
@@ -494,7 +503,8 @@ export default function HomePage() {
               <div className="bg-white border border-gray-300 rounded-2xl shadow-md p-4 flex gap-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                 <Image
                   src="/home/new_pr_johnsam_song.jpg"
-                  alt="Johnsam Joyson Song"
+                  alt="Johnsam Joyson Song" width={112}
+                  height={112} quality={100}
                   className="w-28 md:w-20 h-full rounded-xl object-cover flex-shrink-0 shadow-sm"
                 />
                 <div className="flex-1 flex flex-col justify-center">
@@ -516,7 +526,8 @@ export default function HomePage() {
               <div className="bg-white border border-gray-300 rounded-2xl shadow-md p-4 flex gap-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                 <Image
                   src="/home/new_pr_davidsam_song.jpg"
-                  alt="Davidsam Joyson Song"
+                  alt="Davidsam Joyson Song" width={112}
+                  height={112} quality={100}
                   className="w-28 md:w-20 h-full rounded-xl object-cover flex-shrink-0 shadow-sm"
                 />
                 <div className="flex-1 flex flex-col justify-center">
@@ -551,6 +562,8 @@ export default function HomePage() {
                   <Image
                     src="/home/bible_study.jpg"
                     alt="Sermon Left"
+                    width={224} 
+                    height={256} quality={100}
                     className="w-32 h-40 sm:w-40 sm:h-48 md:w-56 md:h-64 rounded-xl side-card object-cover rotate_image_left"
                   />
                 </div>
@@ -560,6 +573,8 @@ export default function HomePage() {
                   <Image
                     src="/home/sunday_service.jpg"
                     alt="Main Sermon"
+                    width={320} 
+                    height={320} quality={100}
                     className="w-48 h-56 sm:w-64 sm:h-72 md:w-80 md:h-80 rounded-2xl main-card object-cover image_zoom_out"
                   />
                 </div>
@@ -569,14 +584,17 @@ export default function HomePage() {
                   <Image
                     src="/home/saturday_worship.jpg"
                     alt="Sermon Right"
+                    width={224}
+                    height={256} quality={100}
                     className="w-32 h-40 sm:w-40 sm:h-48 md:w-56 md:h-64 rounded-xl side-card object-cover rotate_image_right"
                   />
                 </div>
               </div>
+
               <p className="text-gray-700 text-base">
                 Explore a collection of life-changing sermons that uplift, guide your faith, and strengthen
                 spiritual growth. Start watching now{" "}
-                <a href="/sermons" className="text-[#BF360C] font-semibold hover:underline">
+                <a href="/sermons" className="text-[#84373D] font-semibold hover:underline">
                   CLICK HERE &gt;&gt;
                 </a>
               </p>
@@ -591,6 +609,8 @@ export default function HomePage() {
                   <Image
                     src="/home/kid's_fest.jpg"
                     alt="Gallery Left"
+                    width={224}
+                    height={256} quality={100}
                     className="w-32 h-40 sm:w-40 sm:h-48 md:w-56 md:h-64 rounded-xl side-card object-cover object-right rotate_image_left"
                   />
                 </div>
@@ -600,6 +620,8 @@ export default function HomePage() {
                   <Image
                     src="/home/august_fasting_prayer.jpg"
                     alt="Main Gallery"
+                    width={320}
+                    height={320} quality={100}
                     className="w-48 h-56 sm:w-64 sm:h-72 md:w-80 md:h-80 rounded-2xl main-card object-cover image_zoom_out"
                   />
                 </div>
@@ -609,6 +631,8 @@ export default function HomePage() {
                   <Image
                     src="/home/Fr. Berchmans.jpg"
                     alt="Gallery Right"
+                    width={224}
+                    height={256} quality={100}
                     className="w-32 h-40 sm:w-40 sm:h-48 md:w-56 md:h-64 rounded-xl side-card object-cover object-left rotate_image_right"
                   />
                 </div>
@@ -617,7 +641,7 @@ export default function HomePage() {
               <p className="text-gray-700 text-base">
                 Get a glimpse of the highlights from our special meetings captured in photos. Explore the
                 gallery now{" "}
-                <a href="/gallery" className="text-[#BF360C] font-semibold hover:underline">
+                <a href="/gallery" className="text-[#84373D] font-semibold hover:underline">
                   CLICK HERE &gt;&gt;
                 </a>
               </p>
@@ -625,7 +649,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
 
     </main>
   );

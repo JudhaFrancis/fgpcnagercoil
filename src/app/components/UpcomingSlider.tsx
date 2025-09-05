@@ -43,7 +43,9 @@ export default function UpcomingSlider() {
                     <Image
                         src={previewImage!}
                         alt="Preview"
-                        className="w-[90vw] max-w-full max-h-[80vh] sm:w-[400px] sm:max-w-[400px] rounded-xl shadow-lg"
+                        width={400}
+                        height={320} quality={100}
+                        className="rounded-xl shadow-lg object-contain"
                     />
                     <button
                         onClick={() => setPreviewImage(null)}
@@ -75,8 +77,9 @@ export default function UpcomingSlider() {
                             <div className="flex flex-col items-center justify-center space-y-8">
                                 <Image
                                     src={img.src}
-                                    alt={img.label}
-                                    className="rounded-xl w-3/4 object-cover cursor-pointer"
+                                    alt={img.label} width={600}
+                                    height={400} quality={100}
+                                    className="rounded-xl object-cover cursor-pointer"
                                     onClick={() => setPreviewImage(img.src)}
                                 />
                             </div>

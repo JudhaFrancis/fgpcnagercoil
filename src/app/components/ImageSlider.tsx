@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -35,7 +36,7 @@ export default function ImageSlider() {
           className="relative max-w-[90vw] max-h-[90vh] flex items-center justify-center"
           onClick={(e) => e.stopPropagation()}
         >
-          <img
+          <Image
             src={previewImage!}
             alt="Preview"
             className="max-w-full max-h-full rounded-xl shadow-lg"
@@ -75,7 +76,7 @@ export default function ImageSlider() {
         >
           {images.map((img, index) => (
             <SwiperSlide key={index}>
-              <img
+              <Image
                 src={`/gallery/2025/${img}.jpg`}
                 alt={`Slide ${index + 1}`}
                 className="w-full h:24 md:h-32 object-cover rounded cursor-pointer"

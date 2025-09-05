@@ -1,5 +1,6 @@
-'use client';
+'use client'
 
+import Image from 'next/image';
 import Link from "next/link";
 
 const socialLinks = [
@@ -16,7 +17,7 @@ export default function Footer() {
                     {/* Logo + About */}
                     <div className="text-center flex flex-col items-center">
                         <a href="/home">
-                            <img
+                            <Image
                                 src="/header/fgpc_nagercoil_logo.jpg"
                                 alt="FGPC Logo"
                                 className="w-20 h-20 rounded-[10px] mb-4"

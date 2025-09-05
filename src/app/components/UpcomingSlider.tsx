@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image';
 import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -39,7 +40,7 @@ export default function UpcomingSlider() {
                     className="relative max-w-[90vw] max-h-[90vh] flex items-center justify-center"
                     onClick={(e) => e.stopPropagation()}
                 >
-                    <img
+                    <Image
                         src={previewImage!}
                         alt="Preview"
                         className="w-[90vw] max-w-full max-h-[80vh] sm:w-[400px] sm:max-w-[400px] rounded-xl shadow-lg"
@@ -72,7 +73,7 @@ export default function UpcomingSlider() {
                     {images.map((img, idx) => (
                         <SwiperSlide key={idx}>
                             <div className="flex flex-col items-center justify-center space-y-8">
-                                <img
+                                <Image
                                     src={img.src}
                                     alt={img.label}
                                     className="rounded-xl w-3/4 object-cover cursor-pointer"

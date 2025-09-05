@@ -1,3 +1,7 @@
+'use client'
+
+import Image from 'next/image';
+
 export default function AboutPage() {
   return (
     <main>
@@ -99,22 +103,22 @@ export default function AboutPage() {
 
         {/* Image Row */}
         <div className="container mx-auto px-6 max-w-6xl mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          <img
+          <Image
             src="/aboutus/aboutus_1.jpg"
             alt="About 1"
             className="rounded-xl shadow-md w-full h-full object-cover"
           />
-          <img
+          <Image
             src="/aboutus/aboutus_2.jpg"
             alt="About 2"
             className="rounded-xl shadow-md w-full h-full object-cover"
           />
-          <img
+          <Image
             src="/aboutus/aboutus_3.jpg"
             alt="About 3"
             className="rounded-xl shadow-md w-full h-full object-cover"
           />
-          <img
+          <Image
             src="/aboutus/aboutus_4.jpg"
             alt="About 4"
             className="rounded-xl shadow-md w-full h-full object-cover"
@@ -157,7 +161,7 @@ export default function AboutPage() {
 
               {/* Right Image */}
               <div className="md:w-5/12 mt-4 md:mt-0">
-                <img
+                <Image
                   src="/aboutus/aboutus_3.jpg"
                   alt="Timeline 2025"
                   className="w-full h-56 md:h-64 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-500"
@@ -169,7 +173,7 @@ export default function AboutPage() {
             <div className="mb-12 flex flex-col md:flex-row items-center md:justify-between relative">
               {/* Left Image */}
               <div className="md:w-5/12 md:order-1 order-2 mt-4 md:mt-0">
-                <img
+                <Image
                   src="/aboutus/aboutus_2.jpg"
                   alt="Timeline 2015"
                   className="w-full h-56 md:h-64 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-500"
@@ -209,7 +213,7 @@ export default function AboutPage() {
 
               {/* Right Image */}
               <div className="md:w-5/12 mt-4 md:mt-0">
-                <img
+                <Image
                   src="/aboutus/aboutus_1.jpg"
                   alt="Timeline 2005"
                   className="w-full h-56 md:h-64 object-cover rounded-xl shadow-md hover:scale-105 transition-transform duration-500"

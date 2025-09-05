@@ -24,7 +24,7 @@ export default function Header() {
     }, []);
 
     return (
-        <header className="bg-[#222222CC] text-[#DEDEDE] py-2 top-4 z-50 shadow sticky max-w-5xl mx-auto mt-3 rounded-lg">
+        <header className="bg-[#222222CC] text-[#DEDEDE] py-2 top-4 z-50 shadow sticky max-w-5xl mx-4 md:mx-auto mt-3 rounded-lg">
             <div className="max-w-7xl mx-auto flex items-center justify-between px-4 font-poppins">
                 {/* Logo */}
                 <div className="flex items-center flex-shrink-0 bg-[#3E3E3E] rounded-[10px] p-[6px]">
@@ -99,12 +99,18 @@ export default function Header() {
             >
                 <div className="flex flex-col items-center space-y-2 py-4 bg-white">
                     <Link href="/home" className="text-[#212121] hover:text-[#BF360C] p-2 rounded-[10px] text-sm font-medium">
-                        HOME
+                        Home
                     </Link>
-                    <Link href="/about" className="text-[#212121] hover:text-[#BF360C] p-2 rounded-[10px] text-sm font-medium">
-                        ABOUT US
+                    <Link href="/aboutus" className="text-[#212121] hover:text-[#BF360C] p-2 rounded-[10px] text-sm font-medium">
+                        About Us
                     </Link>
-                    <Link href="/contact" className="text-[#212121] hover:text-[#BF360C] p-2 rounded-[10px] text-sm font-medium">
+                    <Link href="/sermons" className="text-[#212121] hover:text-[#BF360C] p-2 rounded-[10px] text-sm font-medium">
+                        Sermons
+                    </Link>
+                    <Link href="/gallery" className="text-[#212121] hover:text-[#BF360C] p-2 rounded-[10px] text-sm font-medium">
+                        Gallery
+                    </Link>
+                    <Link href="/contactus" className="text-[#212121] hover:text-[#BF360C] p-2 rounded-[10px] text-sm font-medium">
                         CONTACT US
                     </Link>
                 </div>

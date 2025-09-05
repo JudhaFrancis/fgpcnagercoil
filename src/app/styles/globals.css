@@ -78,6 +78,7 @@ body {
 .rotate_image_right {
   transition: transform 0.3s ease;
 }
+
 .image_card:hover .rotate_image_right {
   transform: rotate(5deg);
 }
@@ -85,6 +86,7 @@ body {
 .rotate_image_left {
   transition: transform 0.3s ease;
 }
+
 .image_card:hover .rotate_image_left {
   transform: rotate(-5deg);
 }
@@ -93,7 +95,14 @@ body {
 .image_zoom_out {
   transition: transform 0.3s ease, width 0.3s ease;
 }
+
 .image_card:hover .image_zoom_out {
-  transform: scale(0.9); /* slight zoom out */
-  width: 250px;          /* shrink width */
+  transform: scale(0.9);
+  /* slight zoom out */
+  width: 250px;
+  /* shrink width */
+}
+
+.custom-placeholder::placeholder {
+  color: #3E3E3E;
 }

@@ -41,7 +41,7 @@ export default function HomePage() {
 
             {/* Description */}
             <p className="mt-3 sm:mt-4 text-sm sm:text-base md:text-lg text-white font-normal px-2 sm:px-0">
-              Together, let's build the Kingdom of God through love, service, and faith, creating a community rooted in His grace
+              Together, let&apos;s build the Kingdom of God through love, service, and faith, creating a community rooted in His grace
             </p>
 
             {/* Buttons - Always in Single Row */}

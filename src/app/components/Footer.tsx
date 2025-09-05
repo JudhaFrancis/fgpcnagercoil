@@ -1,7 +1,6 @@
 'use client'
 
 import Image from 'next/image';
-import Link from "next/link";
 
 const socialLinks = [
     { href: "https://www.facebook.com/yourpage", icon: "facebook" },

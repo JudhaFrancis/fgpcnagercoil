@@ -607,7 +607,7 @@ export default function HomePage() {
                 {/* Left Side Image */}
                 <div className="absolute -left-6 sm:-left-10 md:-left-16">
                   <Image
-                    src="/home/kid's_fest.jpg"
+                    src="/home/kids_fest.jpg"
                     alt="Gallery Left"
                     width={224}
                     height={256} quality={100}

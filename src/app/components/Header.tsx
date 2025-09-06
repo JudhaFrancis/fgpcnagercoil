@@ -8,8 +8,8 @@ export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header className="bg-[#222222CC] text-[#DEDEDE] py-2 md:py-2 top-4 z-50 shadow sticky max-w-5xl mx-4 md:mx-auto mt-3 rounded-lg">
-            <div className="max-w-7xl mx-auto flex items-center justify-between px-3 font-poppins">
+        <header className="bg-[#222222CC] text-[#DEDEDE] py-2 md:py-2 top-4 z-50 shadow sticky max-w-4xl mx-4 md:mx-auto mt-3 rounded-lg">
+            <div className="max-w-6xl mx-auto flex items-center justify-between px-3 font-poppins">
                 {/* Logo */}
                 <div className="flex items-center flex-shrink-0 bg-[#3E3E3E] rounded-[10px] p-[0px] md:p-[6px]">
                     <Link href="/home">

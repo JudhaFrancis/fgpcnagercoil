@@ -1,4 +1,10 @@
+'use client'
+
+import Image from 'next/image';
+import useBlurFadeIn from '../../hooks/useBlurFadeIn';
+
 export default function ContactUsPage() {
+  useBlurFadeIn();
   return (
     <main>
       <section
@@ -19,16 +25,16 @@ export default function ContactUsPage() {
 
       <section className="bg-white px-6 py-20 font-poppins text-[#222831]">
         <div className="container max-w-5xl mx-auto text-center mb-10">
-          <h2 className="text-4xl font-semibold mb-6 font-montserrat"><span className="text-[#84373D]">Connect</span> With Our Team</h2>
-          <p className="mb-6 text-gray-700">
+          <h2 className="text-4xl font-semibold mb-6 font-montserrat blur_fade_in_up"><span className="text-[#84373D]">Connect</span> With Our Team</h2>
+          <p className="mb-6 text-gray-700 blur_fade_in_up">
             We&apos;re here to assist you! Please contact us using the details below for any questions, prayer requests, feedback, or further information. We look forward to connecting with you soon!
           </p>
         </div>
         <div className="container max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           {/* Contact Form */}
           <div className="bg-[#f8f8f8] border border-[#DEDEDE] rounded-xl p-6 shadow-md max-w-xl mx-auto">
-            <h2 className="text-3xl font-semibold mb-6 font-montserrat text-center">Get in Touch with Us</h2>
-            <form className="space-y-5">
+            <h2 className="text-3xl font-semibold mb-6 font-montserrat text-center blur_fade_in_up">Get in Touch with Us</h2>
+            <form className="space-y-5 blur_fade_in_up">
 
               <input
                 type="text"
@@ -59,16 +65,6 @@ export default function ContactUsPage() {
                 className="w-full px-4 py-3 border border-[#DEDEDE] rounded-[10px] h-32 resize-none focus:outline-none focus:ring-1 focus:ring-[#222831] custom-placeholder"
               ></textarea>
 
-              <div>
-                <label className="block mb-2 text-sm font-medium text-gray-700">
-                  Upload Prayer Request or Testimony (Optional)
-                </label>
-                <input
-                  type="file"
-                  className="block w-full text-sm text-gray-600 border border-[#DEDEDE] rounded-[10px] px-4 py-2 bg-white file:mr-4 file:py-2 file:px-4 file:border-0 file:rounded-md file:text-sm file:font-semibold file:bg-[#3E3E3E] file:text-white hover:file:bg-[#313131] transition"
-                />
-              </div>
-
               <div className="flex justify-center">
                 <button
                   type="submit"
@@ -82,15 +78,15 @@ export default function ContactUsPage() {
 
           {/* Contact Details */}
           <div className="font-poppins">
-            <h2 className="text-3xl font-semibold mb-6 font-montserrat">Contact Details</h2>
-            <p className="mb-6 text-gray-700">
+            <h2 className="text-3xl font-semibold mb-6 font-montserrat blur_fade_in_up">Contact Details</h2>
+            <p className="mb-6 text-gray-700 blur_fade_in_up">
               For inquiries, support, or prayers, connect with us through the details below anytime for assistance
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               {/* Mobile */}
               <a href="tel:+919488484745" className="block hover:no-underline">
-                <div className="flex items-center bg-white border rounded-[10px] p-4 shadow-sm hover:shadow-md transition duration-300">
+                <div className="flex items-center bg-white border rounded-[10px] p-4 shadow-sm hover:shadow-md transition duration-300 blur_fade_in_up">
                   <div className="bg-[#3E3E3E] text-[#DEDEDE] px-4 py-3 rounded-[10px] mr-4 hover:bg-[#84373D] transition duration-300">
                     <i className="fas fa-phone-alt text-lg transform rotate-90 cursor-pointer"></i>
                   </div>
@@ -103,7 +99,7 @@ export default function ContactUsPage() {
 
               {/* Email */}
               <a href="mailto:fgpcngl@gmail.com" className="block hover:no-underline">
-                <div className="flex items-center bg-white border rounded-[10px] p-4 shadow-sm hover:shadow-md transition duration-300">
+                <div className="flex items-center bg-white border rounded-[10px] p-4 shadow-sm hover:shadow-md transition duration-300 blur_fade_in_up">
                   <div className="bg-[#3E3E3E] text-[#DEDEDE] px-4 py-3 rounded-[10px] mr-4 hover:bg-[#84373D] transition duration-300">
                     <i className="fas fa-envelope text-lg cursor-pointer"></i>
                   </div>
@@ -122,7 +118,7 @@ export default function ContactUsPage() {
               rel="noopener noreferrer"
               className="block hover:no-underline"
             >
-              <div className="flex bg-white border rounded-[10px] p-4 shadow-sm hover:shadow-md transition duration-300 mb-6">
+              <div className="flex bg-white border rounded-[10px] p-4 shadow-sm hover:shadow-md transition duration-300 mb-6 blur_fade_in_up">
                 <div className="bg-[#3E3E3E] text-[#DEDEDE] px-4 py-3 h-14 rounded-[10px] mr-4 hover:bg-[#84373D] transition duration-300 flex items-center justify-center">
                   <i className="fas fa-map-marker-alt text-lg cursor-pointer inline-block"></i>
 
@@ -143,7 +139,7 @@ export default function ContactUsPage() {
             {/* Social Media Icons */}
             <div className="mt-6">
               <hr className="mb-4" />
-              <div className="flex items-center justify-between">
+              <div className="flex items-center justify-between blur_fade_in_up">
                 <p className="font-semibold mb-0">Social Media:</p>
                 <div className="flex gap-4">
                   <a href="#" className="w-10 h-10 flex items-center justify-center bg-[#3E3E3E] text-white rounded-[10px] hover:bg-[#84373D] transition duration-300">
@@ -164,18 +160,18 @@ export default function ContactUsPage() {
 
       <section className="bg-[#F5F5F5] px-6 py-20 font-poppins text-[#222831]">
         <div className="container max-w-5xl mx-auto">
-          <h2 className="text-4xl font-montserrat font-extrabold mb-6 text-center">
+          <h2 className="text-4xl font-montserrat font-extrabold mb-6 text-center blur_fade_in_up">
             Full Gospel Pentecostal Church <span className="text-[#84373d]">Nagercoil</span>
           </h2>
 
-          <p className="mb-8 text-gray-700 max-w-4xl mx-auto leading-relaxed text-center">
+          <p className="mb-8 text-gray-700 max-w-4xl mx-auto leading-relaxed text-center blur_fade_in_up">
             Our location at <strong>174, Church Street, Vettoonimadam, Nagercoil - 629 003</strong>...
           </p>
 
           {/* Map and Distance side-by-side */}
           <div className="flex flex-col md:flex-row items-center max-5w-xl mx-auto mb-8 gap-8">
             {/* Map */}
-            <div className="flex-shrink-0 w-full md:w-1/2 rounded-[10px] overflow-hidden shadow-lg">
+            <div className="flex-shrink-0 w-full md:w-1/2 rounded-[10px] overflow-hidden shadow-lg blur_fade_in_up">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.1040276247836!2d77.4344110143367!3d8.18214379412862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0411763082506f%3A0x7bdc5a57e93a64e3!2sFull%20Gospel%20Pentecostal%20Church!5e0!3m2!1sen!2sin!4v1668432434976!5m2!1sen!2sin"
                 width="100%"
@@ -190,7 +186,7 @@ export default function ContactUsPage() {
             {/* Distance Info */}
             <div className="w-full md:w-1/2 text-gray-800 text-base leading-relaxed">
               <ul className="space-y-6">
-                <li className="flex items-center justify-between">
+                <li className="flex items-center justify-between blur_fade_in_up">
                   <div className="flex items-center">
                     <i className="fas fa-bus text-[#84373d] mr-3 w-6 text-lg"></i>
                     2 km from Nagercoil Main Bus Stand
@@ -205,7 +201,7 @@ export default function ContactUsPage() {
                   </a>
                 </li>
 
-                <li className="flex items-center justify-between">
+                <li className="flex items-center justify-between blur_fade_in_up">
                   <div className="flex items-center">
                     <i className="fas fa-train text-[#84373d] mr-3 w-6 text-lg"></i>
                     2 km from Nagercoil Town Railway Station
@@ -220,7 +216,7 @@ export default function ContactUsPage() {
                   </a>
                 </li>
 
-                <li className="flex items-center justify-between">
+                <li className="flex items-center justify-between blur_fade_in_up">
                   <div className="flex items-center">
                     <i className="fas fa-train text-[#84373d] mr-3 w-6 text-lg"></i>
                     5 km from Nagercoil Main Railway Station
@@ -235,7 +231,7 @@ export default function ContactUsPage() {
                   </a>
                 </li>
 
-                <li className="flex items-center justify-between">
+                <li className="flex items-center justify-between blur_fade_in_up">
                   <div className="flex items-center">
                     <i className="fas fa-train text-[#84373d] mr-3 w-6 text-lg"></i>
                     20 km from Kanyakumari Railway Station
@@ -250,7 +246,7 @@ export default function ContactUsPage() {
                   </a>
                 </li>
 
-                <li className="flex items-center justify-between">
+                <li className="flex items-center justify-between blur_fade_in_up">
                   <div className="flex items-center">
                     <i className="fas fa-plane text-[#84373d] mr-3 w-6 text-lg"></i>
                     70 km from Thiruvananthapuram Airport
@@ -265,7 +261,7 @@ export default function ContactUsPage() {
                   </a>
                 </li>
 
-                <li className="flex items-center justify-between">
+                <li className="flex items-center justify-between blur_fade_in_up">
                   <div className="flex items-center">
                     <i className="fas fa-plane text-[#84373d] mr-3 w-6 text-lg"></i>
                     115 km from Tuticorin Airport
@@ -288,7 +284,7 @@ export default function ContactUsPage() {
               href="https://www.google.com/maps/dir/?api=1&destination=Full+Gospel+Pentecostal+Church+Nagercoil"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-[#84373D] text-white px-6 py-2 rounded-[10px] text-md font-semibold hover:bg-[#84373D] transition"
+              className="inline-block bg-[#84373D] text-white px-6 py-2 rounded-[10px] text-md font-semibold hover:bg-[#84373D] transition blur_fade_in_up"
             >
               Get Church Directions
             </a>

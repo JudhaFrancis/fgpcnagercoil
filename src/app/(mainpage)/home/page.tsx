@@ -4,8 +4,10 @@ import Image from 'next/image'
 import Link from "next/link";
 import ImageSlider from '../../components/ImageSlider';
 import UpcomingSlider from '../../components/UpcomingSlider';
+import useBlurFadeIn from '../../hooks/useBlurFadeIn';
 
 export default function HomePage() {
+  useBlurFadeIn();
   return (
     <main>
       {/* Hero Section */}
@@ -78,10 +80,10 @@ export default function HomePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-6 max-w-6xl">
           {/* Title and Description */}
           <div className="text-center mb-8 blur-down">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl leading-tight font-bold text-[#222831] font-montserrat">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl leading-tight font-bold text-[#222831] font-montserrat blur_fade_in_up">
               <span className="text-[#84373d]">Full Gospel</span> Pentecostel Church
             </h1>
-            <p className="text-[#212121] mt-4 text-sm sm:text-base leading-relaxed px-2 sm:px-8 md:px-16">
+            <p className="text-[#212121] mt-4 text-sm sm:text-base leading-relaxed px-2 sm:px-8 md:px-16 blur_fade_in_up">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
               libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum
               imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
@@ -98,7 +100,7 @@ export default function HomePage() {
                 <a
                   key={idx}
                   href="#"
-                  className="flex items-center gap-2 hover:text-[#692A2F] transition text-sm sm:text-base"
+                  className="flex items-center gap-2 hover:text-[#692A2F] transition text-sm sm:text-base blur_fade_in_up"
                 >
                   <i className={`${item.icon} text-base text-[#84373d]`}></i>
                   <p className="text-[#222831]">{item.label}</p>
@@ -118,7 +120,7 @@ export default function HomePage() {
               <Link
                 key={idx}
                 href="/aboutus"
-                className="relative w-full max-w-xs rounded-[10px] border-2 shadow-[1px_8px_12px_0px_rgba(0,0,0,0.12)] block group"
+                className="relative w-full max-w-xs rounded-[10px] border-2 shadow-[1px_8px_12px_0px_rgba(0,0,0,0.12)] block group blur_fade_in_up"
               >
                 {/* Icon Badge */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#413b3b] text-white w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full border-4 border-white">
@@ -147,24 +149,25 @@ export default function HomePage() {
         <div className="container mx-auto px-6 max-w-6xl grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-20 items-center">
 
           {/* Left Column - Pastor Image (40%) */}
-          <div className="flex justify-center md:justify-end order-1 md:col-span-2">
+          <div className="flex justify-center md:justify-center order-1 md:col-span-2">
             <Link href="/johnsamjoyson" className="relative group block">
               <Image
-                src="/home/pr_johnsam_joyson.jpg"
+                src="/home/pr-johnsam_joyson.jpg"
                 alt="Johnsam Joyson"
                 width={384}
-                height={512} quality={100}
-                className="rounded-2xl object-cover cursor-pointer"
+                height={512}
+                quality={100}
+                className="rounded-2xl cursor-pointer mx-auto block blur_fade_in_up"
               />
             </Link>
           </div>
 
           {/* Right Column - Content (60%) */}
           <div className="order-2 md:col-span-3">
-            <h2 className="text-4xl font-bold font-montserrat mb-4">
+            <h2 className="text-4xl font-bold font-montserrat mb-4 blur_fade_in_up">
               <span className="text-[#84373D]">Johnsam</span> Joyson
             </h2>
-            <p className="text-[#212121] text-base leading-relaxed mb-6 text-justify">
+            <p className="text-[#212121] text-base leading-relaxed mb-6 text-justify blur_fade_in_up">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
               Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at
               nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec
@@ -172,7 +175,7 @@ export default function HomePage() {
             </p>
 
             {/* Songs or Images Section */}
-            <div className="flex gap-2 mb-6 overflow-x-auto">
+            <div className="flex gap-2 mb-6 overflow-x-auto blur_fade_in_up">
               {/* Image 1 */}
               <div className="relative h-32 w-48 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
                 <Link href="/Johnsamsamjoyson">
@@ -196,7 +199,7 @@ export default function HomePage() {
                 <Link href="/Johnsamsamjoyson">
                   <Image
                     src="/songs/johnsam/johnsam_album_thumbnail.jpg"
-                    alt="Song 2" fill quality={100}
+                    alt="Song 2" fill quality={100} unoptimized={true}
                     className="h-full w-full rounded-lg shadow-md object-cover"
                   />
                   {/* Hover Text */}
@@ -241,7 +244,7 @@ export default function HomePage() {
                   <div
                     key={index}
                     className="flex flex-row items-center justify-center gap-2 p-2 bg-white rounded-lg shadow 
-                hover:bg-[#84373D] hover:text-white cursor-pointer transition-colors duration-300 ease-in-out min-w-[120px] flex-shrink-0">
+                hover:bg-[#84373D] hover:text-white cursor-pointer transition-colors duration-300 ease-in-out min-w-[120px] flex-shrink-0 blur_fade_in_up">
                     <i className={`${item.icon} text-xl`}></i>
                     <span className="text-xs font-medium">{item.label}</span>
                   </div>
@@ -259,10 +262,10 @@ export default function HomePage() {
 
           {/* Left Column - Content (60%) */}
           <div className="order-2 md:order-1 md:col-span-3">
-            <h2 className="text-4xl font-bold font-montserrat mb-4">
+            <h2 className="text-4xl font-bold font-montserrat mb-4 blur_fade_in_up">
               <span className="text-[#84373D]">Davidsam</span> Joyson
             </h2>
-            <p className="text-[#212121] text-base leading-relaxed mb-6 text-justify">
+            <p className="text-[#212121] text-base leading-relaxed mb-6 text-justify blur_fade_in_up">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
               Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at
               nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec
@@ -270,7 +273,7 @@ export default function HomePage() {
             </p>
 
             {/* Songs or Images Section */}
-            <div className="flex gap-2 mb-6 overflow-x-auto">
+            <div className="flex gap-2 mb-6 overflow-x-auto blur_fade_in_up">
               {/* Image 1 */}
               <div className="relative h-32 w-56 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
                 <Link href="/davidsamjoyson">
@@ -339,9 +342,9 @@ export default function HomePage() {
                   <div
                     key={index}
                     className="flex flex-row items-center justify-center gap-2 p-2 bg-[#f5f5f5] rounded-lg shadow 
-                hover:bg-[#84373D] hover:text-white cursor-pointer transition-colors duration-300 ease-in-out min-w-[120px] flex-shrink-0">
+                hover:bg-[#84373D] hover:text-white cursor-pointer transition-colors duration-300 ease-in-out min-w-[120px] flex-shrink-0 blur_fade_in_up">
                     <i className={`${item.icon} text-xl`}></i>
-                    <span className="text-xs font-medium">{item.label}</span>
+                    <span className="text-xs font-medium blur_fade_in_up">{item.label}</span>
                   </div>
                 ))}
               </div>
@@ -352,10 +355,10 @@ export default function HomePage() {
           <div className="flex justify-center md:justify-end order-1 md:order-2 md:col-span-2">
             <Link href="/davidsamjoyson" className="relative group block">
               <Image
-                src="/home/pr_davidsam_joyson.jpg"
+                src="/home/pr-davidsam_joyson.jpg"
                 alt="Davidsam Joyson" width={384}
-                height={512} quality={100}
-                className="rounded-2xl object-cover cursor-pointer"
+                height={512} quality={100} unoptimized={true}
+                className="rounded-2xl object-cover cursor-pointer blur_fade_in_up"
               />
             </Link>
           </div>
@@ -375,10 +378,10 @@ export default function HomePage() {
           {/* Central Box Wrapper (Relative for positioning) */}
           <div className="relative max-w-3xl mx-auto">
             {/* Central Box */}
-            <div className="bg-[#FFFFFFA8] backdrop-blur-md shadow-2xl p-6 text-center rounded-[10px]">
+            <div className="bg-[#FFFFFFA8] backdrop-blur-md shadow-2xl p-6 text-center rounded-[10px] blur_fade_in_up">
               <div className="p-6 border-2 border-black rounded-[10px]">
                 <h2
-                  className="relative text-4xl md:text-7xl text-black drop-shadow-md mb-1 font-bold font-montserrat"
+                  className="relative text-4xl md:text-7xl text-black drop-shadow-md mb-1 font-bold font-montserrat blur_fade_in_up"
                   style={{
                     WebkitTextFillColor: 'black', // Text fill
                     WebkitTextStrokeWidth: '25px',   // Stroke width
@@ -397,22 +400,22 @@ export default function HomePage() {
                   <div className="flex-1" style={{ height: '2.8px', backgroundColor: '#84373D' }}></div>
                 </div>
 
-                <p className="md:text-base text-black mb-3">
+                <p className="md:text-base text-black mb-3 blur_fade_in_up">
                   <strong>Sunday 1st Service:</strong> 6:00AM - 8:30AM
                 </p>
-                <p className="md:text-base text-black mb-3">
+                <p className="md:text-base text-black mb-3 blur_fade_in_up">
                   <strong>Sunday 2nd Service:</strong> 10:00AM - 12:30PM
                 </p>
-                <p className="md:text-base text-black mb-3">
+                <p className="md:text-base text-black mb-3 blur_fade_in_up">
                   <strong>Monday Bible Study:</strong> 7:00PM - 8:30PM
                 </p>
-                <p className="md:text-base text-black mb-3">
+                <p className="md:text-base text-black mb-3 blur_fade_in_up">
                   <strong>Friday Fasting Prayer:</strong> 10:00AM - 1:00PM
                 </p>
-                <p className="md:text-base text-black">
+                <p className="md:text-base text-black blur_fade_in_up">
                   <strong>Saturday Night Worship:</strong> 7:00PM - 8:30PM
                 </p>
-                <p className='text-black pt-4'>
+                <p className='text-black pt-4 blur_fade_in_up'>
                   Know More About the Other Services
                   <Link href="/ministries" className="relative group text-[#84373D] font-bold inline-block hover:underline pl-2">
                     CLICK HERE &gt;&gt;
@@ -430,7 +433,7 @@ export default function HomePage() {
                   alt="Sunday Service"
                   width={800}
                   height={500} quality={100}
-                  className="rounded-lg"
+                  className="rounded-lg blur_fade_in_up"
                   style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
                 />
               </Link>
@@ -443,7 +446,7 @@ export default function HomePage() {
                   src="/home/fasting_prayer.jpg"
                   alt="Fasting Prayer" width={800}
                   height={500} quality={100}
-                  className="rounded-lg"
+                  className="rounded-lg blur_fade_in_up"
                   style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
                 />
               </Link>
@@ -456,7 +459,7 @@ export default function HomePage() {
                   src="/home/bible_study.jpg"
                   alt="Bible Study" width={800}
                   height={500} quality={100}
-                  className="rounded-lg"
+                  className="rounded-lg blur_fade_in_up"
                   style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
                 />
               </Link>
@@ -469,7 +472,7 @@ export default function HomePage() {
                   src="/home/saturday_worship.jpg"
                   alt="Saturday Worship" width={800}
                   height={500} quality={100}
-                  className="rounded-lg"
+                  className="rounded-lg blur_fade_in_up"
                   style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
                 />
               </Link>
@@ -481,11 +484,11 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Title */}
-          <h2 className="text-4xl font-bold text-center font-montserrat text-gray-900">
+          <h2 className="text-4xl font-bold text-center font-montserrat text-gray-900 blur_fade_in_up">
             Next <span className="text-[#84373D]">Upcoming</span>
           </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center blur_fade_in_up">
             {/* LEFT COLUMN */}
             <UpcomingSlider />
 
@@ -497,9 +500,9 @@ export default function HomePage() {
                   src="/home/upcoming_meeting_2025.jpg"
                   alt="Event Thumbnail" width={112}
                   height={112} quality={100}
-                  className="w-28 md:w-20 h-full rounded-xl object-cover flex-shrink-0 shadow-sm"
+                  className="w-28 md:w-20 h-full rounded-xl object-cover flex-shrink-0 shadow-sm blur_fade_in_up"
                 />
-                <div className="flex-1 flex flex-col justify-center">
+                <div className="flex-1 flex flex-col justify-center blur_fade_in_up">
                   <h3 className="text-2xl md:text-xl font-semibold text-gray-900 mb-2 leading-snug">
                     New Year Service 2025
                   </h3>
@@ -528,9 +531,9 @@ export default function HomePage() {
                   src="/home/new_pr_johnsam_song.jpg"
                   alt="Johnsam Joyson Song" width={112}
                   height={112} quality={100}
-                  className="w-28 md:w-20 h-full rounded-xl object-cover flex-shrink-0 shadow-sm"
+                  className="w-28 md:w-20 h-full rounded-xl object-cover flex-shrink-0 shadow-sm blur_fade_in_up"
                 />
-                <div className="flex-1 flex flex-col justify-center">
+                <div className="flex-1 flex flex-col justify-center blur_fade_in_up">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 leading-snug">Song Release</h3>
                   <p className="text-gray-700 text-base md:text-sm mb-1">
                     <span className="font-semibold text-gray-900">Sung By:</span> Johnsam Joyson
@@ -551,9 +554,9 @@ export default function HomePage() {
                   src="/home/new_pr_davidsam_song.jpg"
                   alt="Davidsam Joyson Song" width={112}
                   height={112} quality={100}
-                  className="w-28 md:w-20 h-full rounded-xl object-cover flex-shrink-0 shadow-sm"
+                  className="w-28 md:w-20 h-full rounded-xl object-cover flex-shrink-0 shadow-sm blur_fade_in_up"
                 />
-                <div className="flex-1 flex flex-col justify-center">
+                <div className="flex-1 flex flex-col justify-center blur_fade_in_up">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2 leading-snug">Song Release</h3>
                   <p className="text-gray-700 text-base md:text-sm mb-1">
                     <span className="font-semibold text-gray-900">Sung By:</span> Davidsam Joyson
@@ -578,8 +581,8 @@ export default function HomePage() {
 
             {/* Left Column - Sermons */}
             <div className="flex flex-col items-center">
-              <h2 className="text-4xl font-montserrat font-bold text-gray-800 mb-6">Sermons</h2>
-              <div className="relative flex items-center justify-center mb-6 image_card">
+              <h2 className="text-4xl font-montserrat font-bold text-gray-800 mb-6 blur_fade_in_up">Sermons</h2>
+              <div className="relative flex items-center justify-center mb-6 image_card blur_fade_in_up">
                 {/* Left Side Image */}
                 <div className="absolute -left-6 sm:-left-10 md:-left-16">
                   <Image
@@ -594,11 +597,11 @@ export default function HomePage() {
                 {/* Main Image */}
                 <div className="z-10">
                   <Image
-                    src="/home/sunday_service.jpg"
+                    src="/home/kingdom-sermon.jpg"
                     alt="Main Sermon"
                     width={320}
                     height={320} quality={100}
-                    className="w-48 h-56 sm:w-64 sm:h-72 md:w-80 md:h-80 rounded-2xl main-card object-cover image_zoom_out"
+                    className="w-48 h-56 sm:w-64 sm:h-72 md:w-80 md:h-80 rounded-2xl main-card object-right object-cover image_zoom_out"
                   />
                 </div>
 
@@ -614,7 +617,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <p className="text-gray-700 text-base">
+              <p className="text-gray-700 text-base blur_fade_in_up">
                 Explore a collection of life-changing sermons that uplift, guide your faith, and strengthen
                 spiritual growth. Start watching now{" "}
                 <Link href="/sermons" className="text-[#84373D] font-semibold hover:underline">
@@ -625,8 +628,8 @@ export default function HomePage() {
 
             {/* Right Column - Gallery */}
             <div className="flex flex-col items-center">
-              <h2 className="text-4xl font-bold font-montserrat text-gray-800 mb-6">Gallery</h2>
-              <div className="relative flex items-center justify-center mb-6 image_card">
+              <h2 className="text-4xl font-bold font-montserrat text-gray-800 mb-6 blur_fade_in_up">Gallery</h2>
+              <div className="relative flex items-center justify-center mb-6 image_card blur_fade_in_up">
                 {/* Left Side Image */}
                 <div className="absolute -left-6 sm:-left-10 md:-left-16">
                   <Image
@@ -661,10 +664,10 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <p className="text-gray-700 text-base">
+              <p className="text-gray-700 text-base blur_fade_in_up">
                 Get a glimpse of the highlights from our special meetings captured in photos. Explore the
                 gallery now{" "}
-                <Link href="/sermons" className="text-[#84373D] font-semibold hover:underline">
+                <Link href="/gallery" className="text-[#84373D] font-semibold hover:underline">
                   CLICK HERE &gt;&gt;
                 </Link>
               </p>

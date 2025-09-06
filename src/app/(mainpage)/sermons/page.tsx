@@ -1,8 +1,10 @@
 'use client'
 
 import Image from 'next/image';
+import useBlurFadeIn from '../../hooks/useBlurFadeIn';
 
 export default function SermonsPage() {
+  useBlurFadeIn();
   return (
     <main>
       {/* Hero Section */}
@@ -23,7 +25,7 @@ export default function SermonsPage() {
       {/* Playlist Section */}
       <section className="py-16 bg-white font-poppins">
         <div className="container mx-auto px-6 max-w-6xl">
-          <h2 className="text-3xl font-semibold mb-10 font-montserrat text-[#222831]">Playlists</h2>
+          <h2 className="text-3xl font-semibold mb-10 font-montserrat text-[#222831] blur_fade_in_up">Playlists</h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {[
@@ -133,7 +135,7 @@ export default function SermonsPage() {
                 href={playlist.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-[#F7F7F7] border border-[#DEDEDE] rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition pt-2"
+                className="block bg-[#F7F7F7] border border-[#DEDEDE] rounded-xl overflow-hidden shadow-sm hover:shadow-md hover:-translate-y-1 transition pt-2 blur_fade_in_up"
               >
                 {/* First blurred section */}
                 <div className="flex justify-center">

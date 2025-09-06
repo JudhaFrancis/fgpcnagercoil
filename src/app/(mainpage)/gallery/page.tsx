@@ -1,8 +1,10 @@
 'use client'
 
 import Image from 'next/image';
+import useBlurFadeIn from '../../hooks/useBlurFadeIn';
 
 export default function GalleryPage() {
+  useBlurFadeIn();
   return (
     <main>
       <section
@@ -43,7 +45,7 @@ export default function GalleryPage() {
                 alt={img.alt}
                 width={300}
                 height={200}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover blur_fade_in_up"
               />
             </div>
           ))}

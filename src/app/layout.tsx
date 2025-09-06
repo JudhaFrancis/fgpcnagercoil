@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import "./styles/globals.css";
 import ImageSlider from "./components/ImageSlider";
 import { Poppins, Montserrat } from 'next/font/google';
+import GlobalLoader from "./components/GlobalLoader";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -29,7 +30,9 @@ export default function MainpageLayout({ children }: { children: ReactNode }) {
     <html lang="en" className={`${poppins.variable} ${montserrat.variable}`}>
       <body>
         <Header />
-        {children}
+        <GlobalLoader>
+          {children}
+        </GlobalLoader>
         <div id="modal-root"></div>
         <Footer />
       </body>

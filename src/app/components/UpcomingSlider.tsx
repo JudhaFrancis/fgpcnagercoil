@@ -74,7 +74,7 @@ export default function UpcomingSlider() {
                 >
                     {images.map((img, idx) => (
                         <SwiperSlide key={idx}>
-                            <div className="flex flex-col items-center justify-center space-y-8">
+                            <div className="flex flex-col items-center justify-center space-y-8 m-10">
                                 <Image
                                     src={img.src}
                                     alt={img.label} width={600}

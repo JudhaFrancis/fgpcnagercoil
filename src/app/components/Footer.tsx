@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image';
+import Link from "next/link";
 
 const socialLinks = [
     { href: "https://www.facebook.com/yourpage", icon: "facebook" },
@@ -15,13 +16,13 @@ export default function Footer() {
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_0.8fr_1.1fr_1fr] gap-8">
                     {/* Logo + About */}
                     <div className="text-center flex flex-col items-center">
-                        <a href="/home">
-                            <Image
-                                src="/header/fgpc_nagercoil_logo.jpg"
-                                alt="FGPC Logo" width={80} height={80}
-                                className="rounded-[10px] mb-4"
-                            />
-                        </a>
+                        <Link href="/home">
+                                <Image
+                                    src="/header/fgpc_nagercoil_logo.jpg"
+                                    alt="FGPC Logo" width={80} height={80}
+                                    className="rounded-[10px] mb-4"
+                                />
+                        </Link>
                         <div className="flex space-x-4 mt-2">
                             {socialLinks.map(({ href, icon }) => (
                                 <a
@@ -40,11 +41,11 @@ export default function Footer() {
                     <div>
                         <h3 className="text-xl font-semibold mb-4 font-montserrat text-white">QUICK LINKS</h3>
                         <ul className="space-y-2 text-base font-poppins">
-                            <li><a href="/aboutus" className="hover:text-white">About Us</a></li>
-                            <li><a href="/ministries" className="hover:text-white">Ministries</a></li>
-                            <li><a href="/sermons" className="hover:text-white">Sermons</a></li>
-                            <li><a href="/gallery" className="hover:text-white">Gallery</a></li>
-                            <li><a href="/contact" className="hover:text-white">Contact Us</a></li>
+                            <li><Link href="/aboutus" className="hover:text-white">About Us</Link></li>
+                            <li><Link href="/ministries" className="hover:text-white">Ministries</Link></li>
+                            <li><Link href="/sermons" className="hover:text-white">Sermons</Link></li>
+                            <li><Link href="/gallery" className="hover:text-white">Gallery</Link></li>
+                            <li><Link href="/contactus" className="hover:text-white">Contact Us</Link></li>
                         </ul>
                     </div>
 
@@ -86,9 +87,9 @@ export default function Footer() {
                         © {new Date().getFullYear()} FGPC Nagercoil. All Rights Reserved.
                     </p>
                     <div className="space-x-4">
-                        <a href="/privacy-policy" className="hover:text-[#3E3E3E]">Privacy Policy</a>
+                        <a href="#" className="hover:text-[#3E3E3E]">Privacy Policy</a>
                         <span>|</span>
-                        <a href="/terms-and-conditions" className="hover:text-[#3E3E3E]">Terms &amp; Conditions</a>
+                        <a href="#" className="hover:text-[#3E3E3E]">Terms &amp; Conditions</a>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from "next/link";
 import ImageSlider from '../../components/ImageSlider';
 import UpcomingSlider from '../../components/UpcomingSlider';
 
@@ -114,9 +115,10 @@ export default function HomePage() {
               { icon: "fas fa-user-tie", title: "Founder" },
               { icon: "fas fa-location-arrow", title: "Location" },
             ].map((card, idx) => (
-              <div
+              <Link
                 key={idx}
-                className="relative w-full max-w-xs rounded-[10px] border-2 shadow-[1px_8px_12px_0px_rgba(0,0,0,0.12)]"
+                href="/aboutus"
+                className="relative w-full max-w-xs rounded-[10px] border-2 shadow-[1px_8px_12px_0px_rgba(0,0,0,0.12)] block group"
               >
                 {/* Icon Badge */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#413b3b] text-white w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 flex items-center justify-center rounded-full border-4 border-white">
@@ -134,7 +136,7 @@ export default function HomePage() {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
                   </p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -146,13 +148,15 @@ export default function HomePage() {
 
           {/* Left Column - Pastor Image (40%) */}
           <div className="flex justify-center md:justify-end order-1 md:col-span-2">
-            <Image
-              src="/home/pr_johnsam_joyson.jpg"
-              alt="Johnsam Joyson"
-              width={384}
-              height={512} quality={100}
-              className="rounded-2xl object-cover"
-            />
+            <Link href="/johnsamjoyson" className="relative group block">
+              <Image
+                src="/home/pr_johnsam_joyson.jpg"
+                alt="Johnsam Joyson"
+                width={384}
+                height={512} quality={100}
+                className="rounded-2xl object-cover cursor-pointer"
+              />
+            </Link>
           </div>
 
           {/* Right Column - Content (60%) */}
@@ -171,50 +175,56 @@ export default function HomePage() {
             <div className="flex gap-2 mb-6 overflow-x-auto">
               {/* Image 1 */}
               <div className="relative h-32 w-48 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
-                <Image
-                  src="/songs/johnsam/johnsam_lyrical_thumbnail.jpg"
-                  alt="Song 1" fill quality={100}
-                  className="h-full w-full rounded-lg shadow-md object-cover"
-                />
-                {/* Hover Text */}
-                <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
-                  <p>
-                    Explore most popular songs
-                    <span className="underline decoration-red-700 ml-1">clicking here</span>
-                  </p>
-                </div>
+                <Link href="/Johnsamsamjoyson">
+                  <Image
+                    src="/songs/johnsam/johnsam_lyrical_thumbnail.jpg"
+                    alt="Song 1" fill quality={100}
+                    className="h-full w-full rounded-lg shadow-md object-cover"
+                  />
+                  {/* Hover Text */}
+                  <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
+                    <p>
+                      Explore most popular songs
+                      <span className="underline decoration-red-700 ml-1">clicking here</span>
+                    </p>
+                  </div>
+                </Link>
               </div>
 
               {/* Image 2 */}
               <div className="relative h-32 w-48 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
-                <Image
-                  src="/songs/johnsam/johnsam_album_thumbnail.jpg"
-                  alt="Song 2" fill quality={100}
-                  className="h-full w-full rounded-lg shadow-md object-cover"
-                />
-                {/* Hover Text */}
-                <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
-                  <p>
-                    Explore greatest albums
-                    <span className="underline decoration-red-700 ml-1">clicking here</span>
-                  </p>
-                </div>
+                <Link href="/Johnsamsamjoyson">
+                  <Image
+                    src="/songs/johnsam/johnsam_album_thumbnail.jpg"
+                    alt="Song 2" fill quality={100}
+                    className="h-full w-full rounded-lg shadow-md object-cover"
+                  />
+                  {/* Hover Text */}
+                  <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
+                    <p>
+                      Explore greatest albums
+                      <span className="underline decoration-red-700 ml-1">clicking here</span>
+                    </p>
+                  </div>
+                </Link>
               </div>
 
               {/* Image 3 */}
               <div className="relative h-32 w-48 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
-                <Image
-                  src="/songs/johnsam/johnsam_recent_thumbnail.jpg"
-                  alt="Song 3" fill quality={100}
-                  className="h-full w-full rounded-lg shadow-md object-cover"
-                />
-                {/* Hover Text */}
-                <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
-                  <p>
-                    Discover latest hits
-                    <span className="underline decoration-red-700 ml-1">clicking here</span>
-                  </p>
-                </div>
+                <Link href="/Johnsamsamjoyson">
+                  <Image
+                    src="/songs/johnsam/johnsam_recent_thumbnail.jpg"
+                    alt="Song 3" fill quality={100}
+                    className="h-full w-full rounded-lg shadow-md object-cover"
+                  />
+                  {/* Hover Text */}
+                  <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
+                    <p>
+                      Discover latest hits
+                      <span className="underline decoration-red-700 ml-1">clicking here</span>
+                    </p>
+                  </div>
+                </Link>
               </div>
             </div>
 
@@ -263,50 +273,56 @@ export default function HomePage() {
             <div className="flex gap-2 mb-6 overflow-x-auto">
               {/* Image 1 */}
               <div className="relative h-32 w-56 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
-                <Image
-                  src="/songs/davidsam/davidsam_famous.jpg"
-                  alt="Song 1" fill quality={100}
-                  className="h-full w-full rounded-lg shadow-md object-cover"
-                />
-                {/* Hover Text */}
-                <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
-                  <p>
-                    Explore most popular songs
-                    <span className="underline decoration-red-700 ml-1">clicking here</span>
-                  </p>
-                </div>
+                <Link href="/davidsamjoyson">
+                  <Image
+                    src="/songs/davidsam/davidsam_famous.jpg"
+                    alt="Song 1" fill quality={100}
+                    className="h-full w-full rounded-lg shadow-md object-cover"
+                  />
+                  {/* Hover Text */}
+                  <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
+                    <p>
+                      Explore most popular songs
+                      <span className="underline decoration-red-700 ml-1">clicking here</span>
+                    </p>
+                  </div>
+                </Link>
               </div>
 
               {/* Image 2 */}
               <div className="relative h-32 w-56 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
-                <Image
-                  src="/songs/davidsam/davidsam_jukebox.jpg"
-                  alt="Song 2" fill quality={100}
-                  className="h-full w-full rounded-lg shadow-md object-cover"
-                />
-                {/* Hover Text */}
-                <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
-                  <p>
-                    Explore greatest albums
-                    <span className="underline decoration-red-700 ml-1">clicking here</span>
-                  </p>
-                </div>
+                <Link href="/davidsamjoyson">
+                  <Image
+                    src="/songs/davidsam/davidsam_jukebox.jpg"
+                    alt="Song 2" fill quality={100}
+                    className="h-full w-full rounded-lg shadow-md object-cover"
+                  />
+                  {/* Hover Text */}
+                  <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
+                    <p>
+                      Explore greatest albums
+                      <span className="underline decoration-red-700 ml-1">clicking here</span>
+                    </p>
+                  </div>
+                </Link>
               </div>
 
               {/* Image 3 */}
               <div className="relative h-32 w-56 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
-                <Image
-                  src="/songs/davidsam/davidsam_recent.jpg"
-                  alt="Song 3" fill quality={100}
-                  className="h-full w-full rounded-lg shadow-md object-cover"
-                />
-                {/* Hover Text */}
-                <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
-                  <p>
-                    Discover latest hits
-                    <span className="underline decoration-red-700 ml-1">clicking here</span>
-                  </p>
-                </div>
+                <Link href="/davidsamjoyson">
+                  <Image
+                    src="/songs/davidsam/davidsam_recent.jpg"
+                    alt="Song 3" fill quality={100}
+                    className="h-full w-full rounded-lg shadow-md object-cover"
+                  />
+                  {/* Hover Text */}
+                  <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
+                    <p>
+                      Discover latest hits
+                      <span className="underline decoration-red-700 ml-1">clicking here</span>
+                    </p>
+                  </div>
+                </Link>
               </div>
             </div>
 
@@ -334,12 +350,14 @@ export default function HomePage() {
 
           {/* Right Column - Pastor Image (40%) */}
           <div className="flex justify-center md:justify-end order-1 md:order-2 md:col-span-2">
-            <Image
-              src="/home/pr_davidsam_joyson.jpg"
-              alt="Davidsam Joyson" width={384}
-              height={512} quality={100}
-              className="rounded-2xl object-cover"
-            />
+            <Link href="/davidsamjoyson" className="relative group block">
+              <Image
+                src="/home/pr_davidsam_joyson.jpg"
+                alt="Davidsam Joyson" width={384}
+                height={512} quality={100}
+                className="rounded-2xl object-cover cursor-pointer"
+              />
+            </Link>
           </div>
 
         </div>
@@ -396,12 +414,9 @@ export default function HomePage() {
                 </p>
                 <p className='text-black pt-4'>
                   Know More About the Other Services
-                  <a
-                    href="#more"
-                    className="text-[#84373D] font-bold inline-block hover:underline pl-2"
-                  >
+                  <Link href="/ministries" className="relative group text-[#84373D] font-bold inline-block hover:underline pl-2">
                     CLICK HERE &gt;&gt;
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
@@ -409,47 +424,55 @@ export default function HomePage() {
             {/* Floating Images aligned to the edges */}
             {/* Sunday Service */}
             <div className="absolute md:-top-8 -top-12 -left-2 md:-left-16 w-40 md:w-56 rounded-xl border-3 border-white p-1 overflow-visible transform hover:scale-105 transition duration-300 animate-move bg-white">
-              <Image
-                src="/home/sunday_service.jpg"
-                alt="Sunday Service"
-                width={800}
-                height={500} quality={100}
-                className="rounded-lg"
-                style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
-              />
+              <Link href="/ministries">
+                <Image
+                  src="/home/sunday_service.jpg"
+                  alt="Sunday Service"
+                  width={800}
+                  height={500} quality={100}
+                  className="rounded-lg"
+                  style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
+                />
+              </Link>
             </div>
 
             {/* Fasting Prayer */}
             <div className="absolute md:-top-8 -top-12 -right-2 md:-right-16 w-40 md:w-56 rounded-xl border-3 border-white p-1 overflow-visible transform hover:scale-105 transition duration-300 animate-move bg-white">
-              <Image
-                src="/home/fasting_prayer.jpg"
-                alt="Fasting Prayer" width={800}
-                height={500} quality={100}
-                className="rounded-lg"
-                style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
-              />
+              <Link href="/ministries">
+                <Image
+                  src="/home/fasting_prayer.jpg"
+                  alt="Fasting Prayer" width={800}
+                  height={500} quality={100}
+                  className="rounded-lg"
+                  style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
+                />
+              </Link>
             </div>
 
             {/* Bible Study */}
             <div className="absolute md:-bottom-8 -bottom-12 -left-2 md:-left-16 w-40 md:w-56 rounded-xl border-3 border-white p-1 overflow-visible transform hover:scale-105 transition duration-300 animate-move bg-white">
-              <Image
-                src="/home/bible_study.jpg"
-                alt="Bible Study" width={800}
-                height={500} quality={100}
-                className="rounded-lg"
-                style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
-              />
+              <Link href="/ministries">
+                <Image
+                  src="/home/bible_study.jpg"
+                  alt="Bible Study" width={800}
+                  height={500} quality={100}
+                  className="rounded-lg"
+                  style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
+                />
+              </Link>
             </div>
 
             {/* Saturday Worship */}
             <div className="absolute md:-bottom-8 -bottom-12 -right-2 md:-right-16 w-40 md:w-56 rounded-xl border-3 border-white p-1 overflow-visible transform hover:scale-105 transition duration-300 animate-move bg-white">
-              <Image
-                src="/home/saturday_worship.jpg"
-                alt="Saturday Worship" width={800}
-                height={500} quality={100}
-                className="rounded-lg"
-                style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
-              />
+              <Link href="/ministries">
+                <Image
+                  src="/home/saturday_worship.jpg"
+                  alt="Saturday Worship" width={800}
+                  height={500} quality={100}
+                  className="rounded-lg"
+                  style={{ boxShadow: '5px 11px 15px 1px rgba(0,0,0,0.3)' }}
+                />
+              </Link>
             </div>
           </div>
         </div>
@@ -458,7 +481,7 @@ export default function HomePage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Section Title */}
-          <h2 className="text-4xl font-bold text-center font-montserrat mb-8 text-gray-900">
+          <h2 className="text-4xl font-bold text-center font-montserrat text-gray-900">
             Next <span className="text-[#84373D]">Upcoming</span>
           </h2>
 
@@ -562,7 +585,7 @@ export default function HomePage() {
                   <Image
                     src="/home/bible_study.jpg"
                     alt="Sermon Left"
-                    width={224} 
+                    width={224}
                     height={256} quality={100}
                     className="w-32 h-40 sm:w-40 sm:h-48 md:w-56 md:h-64 rounded-xl side-card object-cover rotate_image_left"
                   />
@@ -573,7 +596,7 @@ export default function HomePage() {
                   <Image
                     src="/home/sunday_service.jpg"
                     alt="Main Sermon"
-                    width={320} 
+                    width={320}
                     height={320} quality={100}
                     className="w-48 h-56 sm:w-64 sm:h-72 md:w-80 md:h-80 rounded-2xl main-card object-cover image_zoom_out"
                   />
@@ -594,9 +617,9 @@ export default function HomePage() {
               <p className="text-gray-700 text-base">
                 Explore a collection of life-changing sermons that uplift, guide your faith, and strengthen
                 spiritual growth. Start watching now{" "}
-                <a href="/sermons" className="text-[#84373D] font-semibold hover:underline">
+                <Link href="/sermons" className="text-[#84373D] font-semibold hover:underline">
                   CLICK HERE &gt;&gt;
-                </a>
+                </Link>
               </p>
             </div>
 
@@ -641,9 +664,9 @@ export default function HomePage() {
               <p className="text-gray-700 text-base">
                 Get a glimpse of the highlights from our special meetings captured in photos. Explore the
                 gallery now{" "}
-                <a href="/gallery" className="text-[#84373D] font-semibold hover:underline">
+                <Link href="/sermons" className="text-[#84373D] font-semibold hover:underline">
                   CLICK HERE &gt;&gt;
-                </a>
+                </Link>
               </p>
             </div>
           </div>

@@ -51,10 +51,10 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({ title, videoIds }) => {
           spaceBetween={10}
           slidesPerView={1}
           onInit={(swiper) => {
-            // Assign refs to navigation
-            if (prevRef.current && nextRef.current) {
-              swiper.params.navigation.prevEl = prevRef.current;
-              swiper.params.navigation.nextEl = nextRef.current;
+            if (prevRef.current && nextRef.current && swiper.params.navigation) {
+              // TypeScript-safe assignment
+              (swiper.params.navigation as any).prevEl = prevRef.current;
+              (swiper.params.navigation as any).nextEl = nextRef.current;
               swiper.navigation.init();
               swiper.navigation.update();
             }

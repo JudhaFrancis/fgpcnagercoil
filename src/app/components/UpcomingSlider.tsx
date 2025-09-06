@@ -10,15 +10,15 @@ import 'swiper/css/pagination'
 
 const images = [
     {
-        src: '/home/upcoming_meeting_2025.jpg',
-        label: 'New Year Service',
+        src: '/ministries/upcoming-holy-spirit-meeting.jpg',
+        label: 'Holy Spirit Meeting',
     },
     {
-        src: '/home/new_pr_johnsam_song.jpg',
+        src: '/songs/johnsam/um-nithiyai-solla-latest.webp',
         label: 'Upcoming Johnsam Joyson Song',
     },
     {
-        src: '/home/new_pr_davidsam_song.jpg',
+        src: '/songs/davidsam/neer-indri-latest.webp',
         label: 'Upcoming Davidsam Joyson Song',
     },
 ]

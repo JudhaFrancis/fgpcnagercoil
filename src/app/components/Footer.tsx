@@ -5,9 +5,9 @@ import Link from "next/link";
 import useBlurFadeIn from '../hooks/useBlurFadeIn';
 
 const socialLinks = [
-    { href: "https://www.facebook.com/yourpage", icon: "facebook" },
-    { href: "https://www.instagram.com/yourpage", icon: "instagram" },
-    { href: "https://www.youtube.com/yourchannel", icon: "youtube" },
+    { href: "https://www.facebook.com/fgpcnagercoil", icon: "facebook" },
+    { href: "https://www.instagram.com/fgpcnagercoil", icon: "instagram" },
+    { href: "https://www.youtube.com/@fgpcngl", icon: "youtube" },
 ];
 export default function Footer() {
     useBlurFadeIn();
@@ -68,7 +68,7 @@ export default function Footer() {
                         <h3 className="text-xl font-semibold mb-4 font-montserrat text-white blur_fade_in_up">CONTACT US</h3>
                         <p className="text-base font-poppins flex items-center gap-3 blur_fade_in_up">
                             <i className="fas fa-envelope"></i>
-                            <a href="mailto:fgpcngl@gmail.com" className="hover:text-white">fgpcngl@gmail.com</a>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=fgpcngl@gmail.com" className="hover:text-white">fgpcngl@gmail.com</a>
                         </p>
                         <p className="text-base font-poppins mt-2 flex items-center gap-3 blur_fade_in_up">
                             <i className="fas fa-phone-alt rotate-90"></i>

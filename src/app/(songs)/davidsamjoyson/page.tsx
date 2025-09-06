@@ -36,7 +36,7 @@ export default function DavidsamJoysonPage() {
             {/* LEFT COLUMN - 40% */}
             <div className="w-full lg:w-[40%] flex justify-center md:justify-start">
               <Image
-                src="/home/new_pr_davidsam_song.jpg"
+                src="/songs/davidsam/neer-indri-latest.webp"
                 alt="Davidsam Joyson"
                 width={384}
                 height={512}

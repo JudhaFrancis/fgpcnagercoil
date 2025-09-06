@@ -33,7 +33,7 @@ export default function JohnsamJoysonPage() {
             {/* LEFT COLUMN - 40% */}
             <div className="w-full lg:w-[40%] flex justify-center md:justify-start">
               <Image
-                src="/home/new_pr_johnsam_song.jpg"
+                src="/songs/johnsam/um-nithiyai-solla-latest.webp"
                 alt="Johnsam Joyson"
                 width={384}
                 height={512}

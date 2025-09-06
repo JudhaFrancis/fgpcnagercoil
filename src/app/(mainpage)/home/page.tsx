@@ -93,13 +93,15 @@ export default function HomePage() {
             {/* Social Links */}
             <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 mt-4 text-[#6D4C41]">
               {[
-                { icon: "fab fa-youtube", label: "fgpcngl" },
-                { icon: "fab fa-instagram", label: "fgpcnagercoil" },
-                { icon: "fab fa-facebook", label: "fgpcnagercoil" },
+                { icon: "fab fa-youtube", label: "fgpcngl", link: "https://www.youtube.com/@fgpcngl" },
+                { icon: "fab fa-instagram", label: "fgpcnagercoil", link: "https://www.instagram.com/fgpcnagercoil" },
+                { icon: "fab fa-facebook", label: "fgpcnagercoil", link: "https://www.facebook.com/fgpcnagercoil" },
               ].map((item, idx) => (
                 <a
                   key={idx}
-                  href="#"
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 hover:text-[#692A2F] transition text-sm sm:text-base blur_fade_in_up"
                 >
                   <i className={`${item.icon} text-base text-[#84373d]`}></i>
@@ -235,19 +237,23 @@ export default function HomePage() {
             <div className="mt-6">
               <div className="flex gap-3 overflow-x-auto scrollbar-hide flex-nowrap">
                 {[
-                  { icon: "fab fa-youtube", label: "YouTube" },
-                  { icon: "fab fa-instagram", label: "Instagram" },
-                  { icon: "fas fa-envelope", label: "Email" },
-                  { icon: "fab fa-facebook", label: "Facebook" },
-                  { icon: "fab fa-spotify", label: "Spotify" },
+                  { icon: "fab fa-youtube", label: "YouTube", link: "https://www.youtube.com/@johnsamjoyson" },
+                  { icon: "fab fa-instagram", label: "Instagram", link: "https://www.instagram.com/johnsamjoyson_official" },
+                  { icon: "fas fa-envelope", label: "Email", link: "https://mail.google.com/mail/?view=cm&fs=1&to=johnsam@gmail.com" },
+                  { icon: "fab fa-facebook", label: "Facebook", link: "https://www.facebook.com/jjohnsam" },
+                  { icon: "fab fa-spotify", label: "Spotify", link: "https://open.spotify.com/artist/6o64MUmOWLYUJkUTxpotPG" },
                 ].map((item, index) => (
-                  <div
+                  <a
                     key={index}
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex flex-row items-center justify-center gap-2 p-2 bg-white rounded-lg shadow 
-                hover:bg-[#84373D] hover:text-white cursor-pointer transition-colors duration-300 ease-in-out min-w-[120px] flex-shrink-0 blur_fade_in_up">
+      hover:bg-[#84373D] hover:text-white cursor-pointer transition-colors duration-300 ease-in-out min-w-[120px] flex-shrink-0 blur_fade_in_up"
+                  >
                     <i className={`${item.icon} text-xl`}></i>
                     <span className="text-xs font-medium">{item.label}</span>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -333,19 +339,22 @@ export default function HomePage() {
             <div className="mt-6">
               <div className="flex gap-3 overflow-x-auto scrollbar-hide flex-nowrap">
                 {[
-                  { icon: "fab fa-youtube", label: "YouTube" },
-                  { icon: "fab fa-instagram", label: "Instagram" },
-                  { icon: "fas fa-envelope", label: "Email" },
-                  { icon: "fab fa-facebook", label: "Facebook" },
-                  { icon: "fab fa-spotify", label: "Spotify" },
+                  { icon: "fab fa-youtube", label: "YouTube", link: "https://www.youtube.com/@davidsamjoyson1" },
+                  { icon: "fab fa-instagram", label: "Instagram", link: "https://www.instagram.com/davidsam_joyson" },
+                  { icon: "fas fa-envelope", label: "Email", link: "https://mail.google.com/mail/?view=cm&fs=1&to=davidsamjoyson@gmail.com" },
+                  { icon: "fab fa-facebook", label: "Facebook", link: "https://www.facebook.com/jdavidsam.joyson" },
+                  { icon: "fab fa-spotify", label: "Spotify", link: "https://open.spotify.com/artist/00b8jKD6HWIqU7xeEGgoev" },
                 ].map((item, index) => (
-                  <div
+                  <a
                     key={index}
-                    className="flex flex-row items-center justify-center gap-2 p-2 bg-[#f5f5f5] rounded-lg shadow 
-                hover:bg-[#84373D] hover:text-white cursor-pointer transition-colors duration-300 ease-in-out min-w-[120px] flex-shrink-0 blur_fade_in_up">
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-row items-center justify-center gap-2 p-2 bg-white rounded-lg shadow 
+                  hover:bg-[#84373D] hover:text-white cursor-pointer transition-colors duration-300 ease-in-out min-w-[120px] flex-shrink-0 blur_fade_in_up">
                     <i className={`${item.icon} text-xl`}></i>
                     <span className="text-xs font-medium blur_fade_in_up">{item.label}</span>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>
@@ -497,25 +506,25 @@ export default function HomePage() {
               {/* Event Card */}
               <div className="bg-white border border-gray-300 rounded-2xl shadow-md p-4 flex gap-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                 <Image
-                  src="/home/upcoming_meeting_2025.jpg"
+                  src="/ministries/upcoming-holy-spirit-meeting.jpg"
                   alt="Event Thumbnail" width={112}
                   height={112} quality={100}
                   className="w-28 md:w-20 h-full rounded-xl object-cover flex-shrink-0 shadow-sm blur_fade_in_up"
                 />
                 <div className="flex-1 flex flex-col justify-center blur_fade_in_up">
                   <h3 className="text-2xl md:text-xl font-semibold text-gray-900 mb-2 leading-snug">
-                    New Year Service 2025
+                    Holy Spirit Meeting 2025
                   </h3>
                   <p className="text-gray-700 text-base md:text-sm mb-1">
-                    <span className="font-semibold text-gray-900">Place:</span> Concordia Ground, Nagercoil
+                    <span className="font-semibold text-gray-900">Place:</span> FGP Church, Nagercoil
                   </p>
                   <p className="text-gray-700 text-base md:text-sm mb-1">
-                    <span className="font-semibold text-gray-900">Date & Time:</span> Dec 31st, 2024, 9:00 PM – 2:00 AM
+                    <span className="font-semibold text-gray-900">Date & Time:</span> Aug 25th - Aug 29th, 10.00 Am
                   </p>
                   <p className="text-gray-700">
                     <span className="font-semibold text-gray-900">Live Stream:</span>{' '}
                     <a
-                      href="#"
+                      href="https://www.youtube.com/watch?v=EYXvcpGSfsk&list=PLJQgwS6Zt5q_f1qjrGwiQ0zczT2AHhqkS"
                       className="text-[#84373D] underline hover:text-[#a95058] transition-colors duration-300"
                       aria-label="Watch Live Stream"
                     >
@@ -528,22 +537,27 @@ export default function HomePage() {
               {/* Song Card 1 */}
               <div className="bg-white border border-gray-300 rounded-2xl shadow-md p-4 flex gap-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                 <Image
-                  src="/home/new_pr_johnsam_song.jpg"
+                  src="/songs/johnsam/um-nithiyai-solla-latest.webp"
                   alt="Johnsam Joyson Song" width={112}
                   height={112} quality={100}
                   className="w-28 md:w-20 h-full rounded-xl object-cover flex-shrink-0 shadow-sm blur_fade_in_up"
                 />
                 <div className="flex-1 flex flex-col justify-center blur_fade_in_up">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 leading-snug">Song Release</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 leading-snug">Song Release {`"UM NEETHIYAI"`}</h3>
                   <p className="text-gray-700 text-base md:text-sm mb-1">
                     <span className="font-semibold text-gray-900">Sung By:</span> Johnsam Joyson
                   </p>
                   <p className="text-gray-700 text-base md:text-sm mb-1">
-                    <span className="font-semibold text-gray-900">Released On:</span> Jan 16th, 2025, 5:00 PM
+                    <span className="font-semibold text-gray-900">Released On:</span> August 17th, 2025, 6:00 PM
                   </p>
                   <p className="text-gray-700">
                     <span className="font-semibold text-gray-900">Listen Soon:</span>{' '}
-                    <span className="text-[#84373D] font-semibold">Stay Tuned</span>
+                    <a
+                      href="https://youtu.be/CwjJXGy0nkQ?si=RkfOTHqAQQTao2FM"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      <span className="text-[#84373D] font-semibold">Watch Here</span>
+                    </a>
                   </p>
                 </div>
               </div>
@@ -551,22 +565,26 @@ export default function HomePage() {
               {/* Song Card 2 */}
               <div className="bg-white border border-gray-300 rounded-2xl shadow-md p-4 flex gap-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                 <Image
-                  src="/home/new_pr_davidsam_song.jpg"
+                  src="/songs/davidsam/neer-indri-latest.webp"
                   alt="Davidsam Joyson Song" width={112}
                   height={112} quality={100}
                   className="w-28 md:w-20 h-full rounded-xl object-cover flex-shrink-0 shadow-sm blur_fade_in_up"
                 />
                 <div className="flex-1 flex flex-col justify-center blur_fade_in_up">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2 leading-snug">Song Release</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2 leading-snug">Song Release {`"NEERINDRI"`}</h3>
                   <p className="text-gray-700 text-base md:text-sm mb-1">
                     <span className="font-semibold text-gray-900">Sung By:</span> Davidsam Joyson
                   </p>
                   <p className="text-gray-700 text-base md:text-sm mb-1">
-                    <span className="font-semibold text-gray-900">Released On:</span> Dec 28th, 2024, 5:00 PM
+                    <span className="font-semibold text-gray-900">Released On:</span> Jun 28th, 2025, 6:30 PM
                   </p>
                   <p className="text-gray-700">
                     <span className="font-semibold text-gray-900">Listen Soon:</span>{' '}
-                    <span className="text-[#84373D] font-semibold">Stay Tuned</span>
+                    <a href="https://youtu.be/3OtDemZ68bA?si=CfVkPZiT-azowRx4"
+                      target="_blank"
+                      rel="noopener noreferrer">
+                      <span className="text-[#84373D] font-semibold">Watch Here</span>
+                    </a>
                   </p>
                 </div>
               </div>

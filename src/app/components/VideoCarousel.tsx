@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import useBlurFadeIn from '../hooks/useBlurFadeIn';
+import type { NavigationOptions } from 'swiper/types';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -50,13 +51,15 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({ title, videoIds }) => {
           modules={[Navigation]}
           spaceBetween={10}
           slidesPerView={1}
-          onInit={(swiper) => {
-            if (prevRef.current && nextRef.current && swiper.params.navigation) {
-              // TypeScript-safe assignment
-              (swiper.params.navigation as any).prevEl = prevRef.current;
-              (swiper.params.navigation as any).nextEl = nextRef.current;
-              swiper.navigation.init();
-              swiper.navigation.update();
+          onBeforeInit={(swiper) => {
+            if (prevRef.current && nextRef.current) {
+              const navigation = swiper.params.navigation as NavigationOptions | undefined;
+
+              swiper.params.navigation = {
+                ...(navigation ?? {}),
+                prevEl: prevRef.current,
+                nextEl: nextRef.current,
+              };
             }
           }}
           breakpoints={{
@@ -77,7 +80,7 @@ const VideoCarousel: React.FC<VideoCarouselProps> = ({ title, videoIds }) => {
                 <img
                   src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
                   alt="Video Thumbnail"
-                  className="w-full rounded-lg shadow-md hover:opacity-90 transition blur_fade_in_up"
+                  className="w-full rounded-lg shadow-md hover:opacity-90 transition"
                 />
               </a>
             </SwiperSlide>

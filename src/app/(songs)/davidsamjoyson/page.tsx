@@ -16,7 +16,7 @@ export default function DavidsamJoysonPage() {
       >
 
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/20 backdrop-blur-[1px] z-10"></div>
+        <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px] z-10"></div>
       </section>
 
       {/* Upcoming Section */}

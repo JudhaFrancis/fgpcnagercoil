@@ -36,9 +36,9 @@ const services = [
     secondService: "10 AM - 12.30 PM",
     place: "FGP Church Nagercoil",
     liveLinks: {
-      "2023 - Live playlist": "https://www.youtube.com/watch?v=WZRHS3tYy60&list=PLJQgwS6Zt5q-JXmcDj29HRGYOwxvJYIdt",
+      "2023 - Live playlist": "https://www.youtube.com/watch?v=fLwnpVFqdLs&list=PLJQgwS6Zt5q-m-7-DFNwL7o6P6hL4_ykO",
       "2024 - Live playlist": "https://www.youtube.com/watch?v=fLwnpVFqdLs&list=PLJQgwS6Zt5q-m-7-DFNwL7o6P6hL4_ykO",
-      "2025 - Live playlist": "https://www.youtube.com/watch?v=fLwnpVFqdLs&list=PLJQgwS6Zt5q-m-7-DFNwL7o6P6hL4_ykO",
+      "2025 - Live playlist": "https://www.youtube.com/watch?v=WZRHS3tYy60&list=PLJQgwS6Zt5q-JXmcDj29HRGYOwxvJYIdt",
     },
   },
   {
@@ -48,9 +48,9 @@ const services = [
     time: "10 AM - 1 PM",
     place: "FGP Church Nagercoil",
     liveLinks: {
-      "2023 - Live playlist": "https://www.youtube.com/watch?v=eLjP0fCY65E&list=PLJQgwS6Zt5q8efHrX2YWPHyeW0Q2TVWYJ",
+      "2025 - Live playlist": "https://www.youtube.com/watch?v=P6srFGNlzfs&list=PLJQgwS6Zt5q8uDD8Vwzief-uKodYrAULf",
       "2024 - Live playlist": "https://www.youtube.com/watch?v=GpGaJ2YSQq0&list=PLJQgwS6Zt5q9zTi7TbgTb7w6of0ehoG6W",
-      "2025 - Live playlist": "https://www.youtube.com/watch?v=GpGaJ2YSQq0&list=PLJQgwS6Zt5q9zTi7TbgTb7w6of0ehoG6W",
+      "2023 - Live playlist": "https://www.youtube.com/watch?v=GpGaJ2YSQq0&list=PLJQgwS6Zt5q9zTi7TbgTb7w6of0ehoG6W",
     },
   },
   {
@@ -60,9 +60,9 @@ const services = [
     time: "7 PM - 8:30 PM",
     place: "FGP Church Nagercoil",
     liveLinks: {
-      "2023 - Live playlist": "https://www.youtube.com/watch?v=ummQqaUOjW8&list=PLJQgwS6Zt5q9PFL0tZ1C2BR1yzPYABJ27",
+      "2023 - Live playlist": "https://www.youtube.com/watch?v=Mm9VQNiHn4Y&list=PLJQgwS6Zt5q8uTL1X03kuEGfNhKIU21xM",
       "2024 - Live playlist": "https://www.youtube.com/watch?v=blTswarZn3Y&list=PLJQgwS6Zt5q8DoTzc-EYM0IRVK6Nw1M1F",
-      "2025 - Live playlist": "https://www.youtube.com/watch?v=Mm9VQNiHn4Y&list=PLJQgwS6Zt5q8uTL1X03kuEGfNhKIU21xM",
+      "2025 - Live playlist": "https://www.youtube.com/watch?v=ummQqaUOjW8&list=PLJQgwS6Zt5q9PFL0tZ1C2BR1yzPYABJ27",
     },
   },
   {
@@ -296,13 +296,18 @@ export default function MinistriesPage() {
       </section>
 
       <section className="py-20 bg-white font-poppins">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-5xl font-semibold text-center font-montserrat text-[#222831] mb-12 blur_fade_in_up">
             Weekly Ministries
           </h2>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
+              {
+                title: "Daily Worship & Prayer",
+                subtitle: "(All)",
+                time: "Every Sunday - Friday\n6.00 PM - 7.00 PM"
+              },
               {
                 title: "Sunday School",
                 subtitle: "(Below 21 years)",

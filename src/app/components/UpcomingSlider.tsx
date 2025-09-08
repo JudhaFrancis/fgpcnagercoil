@@ -14,7 +14,7 @@ const images = [
         label: 'Holy Spirit Meeting',
     },
     {
-        src: '/songs/johnsam/um-nithiyai-solla-latest.webp',
+        src: '/songs/johnsam/um-nithiyai-solla-latest.jpg',
         label: 'Upcoming Johnsam Joyson Song',
     },
     {

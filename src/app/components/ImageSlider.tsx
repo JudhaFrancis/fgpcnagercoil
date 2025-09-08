@@ -39,8 +39,8 @@ export default function ImageSlider() {
           <Image
             src={previewImage!}
             alt="Preview"
-            width={600}
-            height={400} quality={100} layout="responsive"
+              width={400}
+              height={320} quality={100}  
             className="rounded-xl shadow-lg object-contain"
           />
           <button

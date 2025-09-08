@@ -84,10 +84,10 @@ export default function HomePage() {
               <span className="text-[#84373d]">Full Gospel</span> Pentecostel Church
             </h1>
             <p className="text-[#212121] mt-4 text-sm sm:text-base leading-relaxed px-2 sm:px-8 md:px-16 blur_fade_in_up">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent
-              libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum
-              imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper
-              porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+              The ministry began in 1979 under Pastor Kruthudas Samuel amidst many challenges.
+              In 1987, Pastor Joyson took responsibility, leading the ministry with strong faith and hope despite a small congregation and health struggles.
+              Through God&apos;s guidance and vision, the ministry continued to grow and bless many lives.
+              <Link href="/aboutus"><span className="text-[#84373d] cursor-pointer"> Know More</span></Link>
             </p>
 
             {/* Social Links */}
@@ -115,9 +115,21 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-8 p-4 sm:p-6 justify-items-center">
             {/* Card Template */}
             {[
-              { icon: "fas fa-calendar-day", title: "Started At" },
-              { icon: "fas fa-user-tie", title: "Founder" },
-              { icon: "fas fa-location-arrow", title: "Location" },
+              {
+                icon: "fas fa-calendar-day",
+                title: "Started At",
+                content: "The ministry began in 1979 under the leadership of Pastor Kruthudas Samuel."
+              },
+              {
+                icon: "fas fa-user-tie",
+                title: "Founder",
+                content: "In 1987, Pastor Joyson took charge and guided the ministry with faith and vision."
+              },
+              {
+                icon: "fas fa-location-arrow",
+                title: "Location",
+                content: "174, Church Street, Vettoornimadam, Nagercoil-629 003, India."
+              },
             ].map((card, idx) => (
               <Link
                 key={idx}
@@ -137,7 +149,7 @@ export default function HomePage() {
                 {/* Bottom Section */}
                 <div className="bg-[#413b3b] rounded-b-[10px] text-center p-4 sm:p-5 md:p-6">
                   <p className="text-white text-sm sm:text-base mt-2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
+                    {card.content}
                   </p>
                 </div>
               </Link>
@@ -170,72 +182,56 @@ export default function HomePage() {
               <span className="text-[#84373D]">Johnsam</span> Joyson
             </h2>
             <p className="text-[#212121] text-base leading-relaxed mb-6 text-justify blur_fade_in_up">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-              Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at
-              nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec
-              tellus sed augue semper porta. Vestibulum lacinia arcu eget nulla.
+              Pr. Johnsam Joyson serves as the pastor of FGPC Church in Nagercoil.
+              He began his ministry in <span className="text-[#84373D]">2007</span>. The Lord has given him many songs, and through these songs, he has been a blessing to many people.
+              To know more about these songs, click the image below.
             </p>
-
             {/* Songs or Images Section */}
             <div className="flex gap-2 mb-6 overflow-x-auto blur_fade_in_up">
-              {/* Image 1 */}
-              <div className="relative h-32 w-48 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
-                <Link href="/Johnsamsamjoyson">
-                  <Image
-                    src="/songs/johnsam/johnsam_lyrical_thumbnail.jpg"
-                    alt="Song 1" fill quality={100}
-                    className="h-full w-full rounded-lg shadow-md object-cover"
-                  />
-                  {/* Hover Text */}
-                  <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
-                    <p>
-                      Explore most popular songs
-                      <span className="underline decoration-red-700 ml-1">clicking here</span>
-                    </p>
-                  </div>
-                </Link>
-              </div>
-
-              {/* Image 2 */}
-              <div className="relative h-32 w-48 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
-                <Link href="/Johnsamsamjoyson">
-                  <Image
-                    src="/songs/johnsam/johnsam_album_thumbnail.jpg"
-                    alt="Song 2" fill quality={100} unoptimized={true}
-                    className="h-full w-full rounded-lg shadow-md object-cover"
-                  />
-                  {/* Hover Text */}
-                  <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
-                    <p>
-                      Explore greatest albums
-                      <span className="underline decoration-red-700 ml-1">clicking here</span>
-                    </p>
-                  </div>
-                </Link>
-              </div>
-
-              {/* Image 3 */}
-              <div className="relative h-32 w-48 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
-                <Link href="/Johnsamsamjoyson">
-                  <Image
-                    src="/songs/johnsam/johnsam_recent_thumbnail.jpg"
-                    alt="Song 3" fill quality={100}
-                    className="h-full w-full rounded-lg shadow-md object-cover"
-                  />
-                  {/* Hover Text */}
-                  <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
-                    <p>
-                      Discover latest hits
-                      <span className="underline decoration-red-700 ml-1">clicking here</span>
-                    </p>
-                  </div>
-                </Link>
-              </div>
+              {[
+                {
+                  src: "/songs/johnsam/johnsam_lyrical_thumbnail.jpg",
+                  alt: "Song 1",
+                  text: "Explore most popular songs",
+                },
+                {
+                  src: "/songs/johnsam/johnsam_album_thumbnail.jpg",
+                  alt: "Song 2",
+                  text: "Explore greatest albums",
+                },
+                {
+                  src: "/songs/johnsam/johnsam_recent_thumbnail.jpg",
+                  alt: "Song 3",
+                  text: "Discover latest hits",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="relative h-32 w-56 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group"
+                >
+                  <Link href="/Johnsamsamjoyson">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      quality={100}
+                      unoptimized={item.alt === "Song 2"}
+                      className="h-full w-full rounded-lg shadow-md object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
+                      <p>
+                        {item.text}
+                        <span className="underline decoration-red-800 ml-1">clicking here</span>
+                      </p>
+                    </div>
+                  </Link>
+                </div>
+              ))}
             </div>
 
             {/* Social Icons */}
             <div className="mt-6">
-              <div className="flex gap-3 overflow-x-auto scrollbar-hide flex-nowrap">
+              <div className="flex gap-3 overflow-x-auto scrollbar-hide flex-nowrap blur_fade_in_up">
                 {[
                   { icon: "fab fa-youtube", label: "YouTube", link: "https://www.youtube.com/@johnsamjoyson" },
                   { icon: "fab fa-instagram", label: "Instagram", link: "https://www.instagram.com/johnsamjoyson_official" },
@@ -249,7 +245,7 @@ export default function HomePage() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex flex-row items-center justify-center gap-2 p-2 bg-white rounded-lg shadow 
-      hover:bg-[#84373D] hover:text-white cursor-pointer transition-colors duration-300 ease-in-out min-w-[120px] flex-shrink-0 blur_fade_in_up"
+      hover:bg-[#84373D] hover:text-white cursor-pointer transition-colors duration-300 ease-in-out min-w-[120px] flex-shrink-0"
                   >
                     <i className={`${item.icon} text-xl`}></i>
                     <span className="text-xs font-medium">{item.label}</span>
@@ -272,72 +268,56 @@ export default function HomePage() {
               <span className="text-[#84373D]">Davidsam</span> Joyson
             </h2>
             <p className="text-[#212121] text-base leading-relaxed mb-6 text-justify blur_fade_in_up">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.
-              Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at
-              nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec
-              tellus sed augue semper porta. Vestibulum lacinia arcu eget nulla.
+              Pr. Davidsam Joyson serves as the pastor of FGPC Church in Nagercoil.
+              He began his ministry in <span className="text-[#84373D]">2013</span>. The Lord has given him many songs, and through these songs, he has been a blessing to many people.
+              To know more about these songs, click the image below.
             </p>
 
             {/* Songs or Images Section */}
             <div className="flex gap-2 mb-6 overflow-x-auto blur_fade_in_up">
-              {/* Image 1 */}
-              <div className="relative h-32 w-56 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
-                <Link href="/davidsamjoyson">
-                  <Image
-                    src="/songs/davidsam/davidsam_famous.jpg"
-                    alt="Song 1" fill quality={100}
-                    className="h-full w-full rounded-lg shadow-md object-cover"
-                  />
-                  {/* Hover Text */}
-                  <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
-                    <p>
-                      Explore most popular songs
-                      <span className="underline decoration-red-700 ml-1">clicking here</span>
-                    </p>
-                  </div>
-                </Link>
-              </div>
-
-              {/* Image 2 */}
-              <div className="relative h-32 w-56 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
-                <Link href="/davidsamjoyson">
-                  <Image
-                    src="/songs/davidsam/davidsam_jukebox.jpg"
-                    alt="Song 2" fill quality={100}
-                    className="h-full w-full rounded-lg shadow-md object-cover"
-                  />
-                  {/* Hover Text */}
-                  <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
-                    <p>
-                      Explore greatest albums
-                      <span className="underline decoration-red-700 ml-1">clicking here</span>
-                    </p>
-                  </div>
-                </Link>
-              </div>
-
-              {/* Image 3 */}
-              <div className="relative h-32 w-56 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group">
-                <Link href="/davidsamjoyson">
-                  <Image
-                    src="/songs/davidsam/davidsam_recent.jpg"
-                    alt="Song 3" fill quality={100}
-                    className="h-full w-full rounded-lg shadow-md object-cover"
-                  />
-                  {/* Hover Text */}
-                  <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
-                    <p>
-                      Discover latest hits
-                      <span className="underline decoration-red-700 ml-1">clicking here</span>
-                    </p>
-                  </div>
-                </Link>
-              </div>
+              {[
+                {
+                  src: "/songs/davidsam/davidsam_famous.jpg",
+                  alt: "Song 1",
+                  text: "Explore most popular songs",
+                },
+                {
+                  src: "/songs/davidsam/davidsam_jukebox.jpg",
+                  alt: "Song 2",
+                  text: "Explore greatest albums",
+                },
+                {
+                  src: "/songs/davidsam/davidsam_recent.jpg",
+                  alt: "Song 3",
+                  text: "Discover latest hits",
+                },
+              ].map((item, index) => (
+                <div
+                  key={index}
+                  className="relative h-32 w-56 transition-all duration-300 ease-in-out hover:w-60 cursor-pointer group"
+                >
+                  <Link href="/davidsamjoyson">
+                    <Image
+                      src={item.src}
+                      alt={item.alt}
+                      fill
+                      quality={100}
+                      className="h-full w-full rounded-lg shadow-md object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-40 px-2 text-center text-white text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg grid place-items-center">
+                      <p>
+                        {item.text}
+                        <span className="underline decoration-red-700 ml-1">clicking here</span>
+                      </p>
+                    </div>
+                  </Link>
+                </div>
+              ))}
             </div>
 
             {/* Social Icons */}
             <div className="mt-6">
-              <div className="flex gap-3 overflow-x-auto scrollbar-hide flex-nowrap">
+              <div className="flex gap-3 overflow-x-auto scrollbar-hide flex-nowrap blur_fade_in_up">
                 {[
                   { icon: "fab fa-youtube", label: "YouTube", link: "https://www.youtube.com/@davidsamjoyson1" },
                   { icon: "fab fa-instagram", label: "Instagram", link: "https://www.instagram.com/davidsam_joyson" },
@@ -350,8 +330,8 @@ export default function HomePage() {
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex flex-row items-center justify-center gap-2 p-2 bg-white rounded-lg shadow 
-                  hover:bg-[#84373D] hover:text-white cursor-pointer transition-colors duration-300 ease-in-out min-w-[120px] flex-shrink-0 blur_fade_in_up">
+                    className="flex flex-row items-center justify-center gap-2 p-2 bg-[#F5F5F5] rounded-lg shadow 
+                  hover:bg-[#84373D] hover:text-white cursor-pointer transition-colors duration-300 ease-in-out min-w-[120px] flex-shrink-0">
                     <i className={`${item.icon} text-xl`}></i>
                     <span className="text-xs font-medium blur_fade_in_up">{item.label}</span>
                   </a>
@@ -537,7 +517,7 @@ export default function HomePage() {
               {/* Song Card 1 */}
               <div className="bg-white border border-gray-300 rounded-2xl shadow-md p-4 flex gap-6 hover:shadow-lg transition-shadow duration-300 cursor-pointer">
                 <Image
-                  src="/songs/johnsam/um-nithiyai-solla-latest.webp"
+                  src="/songs/johnsam/um-nithiyai-solla-latest.jpg"
                   alt="Johnsam Joyson Song" width={112}
                   height={112} quality={100}
                   className="w-28 md:w-20 h-full rounded-xl object-cover flex-shrink-0 shadow-sm blur_fade_in_up"
